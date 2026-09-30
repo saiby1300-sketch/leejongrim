@@ -1,8 +1,13 @@
 name: Post to Instagram
 
-# Manual trigger only. Nothing is posted until you click "Run workflow"
-# and type "yes" in the confirm box.
+# Runs when publish.txt is pushed (its text is the post id), or manually.
+# Editing images or caption alone does NOT post anything.
+# The same publish.txt text is never posted twice (tracked in .last_posted).
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'publish.txt'
   workflow_dispatch:
     inputs:
       confirm:
@@ -10,14 +15,41 @@ on:
         required: true
         default: 'no'
 
+permissions:
+  contents: write
+
 jobs:
   post:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.confirm == 'yes' }}
+    if: ${{ github.event_name == 'push' || github.event.inputs.confirm == 'yes' }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check for duplicate post
+        id: chk
+        shell: bash
+        run: |
+          if [ -f .last_posted ] && [ "$(cat .last_posted)" = "$(cat publish.txt)" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Already posted: $(cat publish.txt). Skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Publish carousel
+        if: steps.chk.outputs.skip != 'true'
         shell: pwsh
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: ./post_instagram.ps1 -Yes
+
+      - name: Record posted id
+        if: steps.chk.outputs.skip != 'true'
+        shell: bash
+        run: |
+          cp publish.txt .last_posted
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .last_posted
+          git commit -m "Record posted: $(cat publish.txt)"
+          git push
