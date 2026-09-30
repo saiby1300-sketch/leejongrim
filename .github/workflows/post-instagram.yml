@@ -1,0 +1,23 @@
+name: Post to Instagram
+
+# Manual trigger only. Nothing is posted until you click "Run workflow"
+# and type "yes" in the confirm box.
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type yes to publish cards_jpg/card_1..9.jpg with caption.txt'
+        required: true
+        default: 'no'
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.confirm == 'yes' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish carousel
+        shell: pwsh
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: ./post_instagram.ps1 -Yes

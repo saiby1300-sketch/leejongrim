@@ -2,6 +2,8 @@
 # Token is NOT stored in this file. Set it in your own terminal session:
 #   $env:IG_TOKEN = "your token"
 # or leave it unset and you will be asked to type it (hidden).
+# -Yes skips the confirmation prompt (used by GitHub Actions).
+param([switch]$Yes)
 
 $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -44,8 +46,10 @@ Write-Host "Images  : $count (cards_jpg/card_1..$count.jpg)"
 Write-Host "Caption :"
 Write-Host $caption
 Write-Host ""
-$ans = Read-Host "Publish this carousel publicly now? (yes/no)"
-if ($ans -ne "yes") { Write-Host "Cancelled."; exit }
+if (-not $Yes) {
+    $ans = Read-Host "Publish this carousel publicly now? (yes/no)"
+    if ($ans -ne "yes") { Write-Host "Cancelled."; exit }
+}
 
 $children = @()
 for ($n = 1; $n -le $count; $n++) {
