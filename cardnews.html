@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>여행사 창업 조건 카드뉴스</title>
+<style>
+  :root {
+    --bg: #0f2540;
+    --bg2: #16345a;
+    --ink: #ffffff;
+    --muted: #b8c7dc;
+    --accent: #ffb547;
+    --teal: #3ddbc0;
+    --card: rgba(255,255,255,.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #05101f;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,219,192,.28), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,181,71,.2), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 104px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .teal { color: var(--teal); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.12);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .row .name { font-size: 46px; font-weight: 700; }
+  .row .val { font-size: 64px; font-weight: 800; color: var(--accent); }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--teal); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--teal); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; }
+  .big { font-size: 150px; font-weight: 800; color: var(--accent); line-height: 1; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 창업 가이드</div>
+  <div class="spacer"></div>
+  <h1>여행사 창업,<br><span class="accent">무엇이</span><br>필요할까?</h1>
+  <p class="lead cover-sub">등록 전에 꼭 확인해야 할<br>핵심 조건을 차례로 정리했어요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 등록제 -->
+<section class="card" id="c2">
+  <div class="tag">STEP 0</div>
+  <h2>여행업은<br><span class="teal">‘등록’</span>부터 해야 해요</h2>
+  <div class="body">
+    <div class="item"><b>관광진흥법 적용</b><span>여행업은 관광사업으로 분류되어, 영업 전에 관청 등록이 필요해요.</span></div>
+    <div class="item"><b>등록 기관</b><span>사무실이 있는 지역의 시·군·구청 (관광 담당 부서)</span></div>
+    <div class="item"><b>무등록 영업은 불가</b><span>기준을 갖추고 등록을 마친 뒤에 영업을 시작해야 해요.</span></div>
+  </div>
+  <div class="foot"><span>여행사 창업 조건</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 종류 -->
+<section class="card" id="c3">
+  <div class="tag">STEP 1</div>
+  <h2>먼저 <span class="accent">업종</span>을<br>정해야 해요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">종합여행업</b><span>국내외 여행 모두 가능, 내국인·외국인 대상 여행 상품 판매</span></div>
+    <div class="item"><b class="teal">국내외여행업</b><span>국내 여행과 외국 여행을 모두 취급 (외국인 국내 여행은 제외)</span></div>
+    <div class="item"><b>국내여행업</b><span>국내 여행만 취급</span></div>
+  </div>
+  <p class="note">업종에 따라 자본금 등 등록 기준이 달라져요.</p>
+  <div class="foot"><span>여행사 창업 조건</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 자본금 -->
+<section class="card" id="c4">
+  <div class="tag">STEP 2</div>
+  <h2>업종별<br><span class="accent">자본금</span> 기준</h2>
+  <div class="body">
+    <div class="item row"><span class="name">종합여행업</span><span class="val">5,000만원↑</span></div>
+    <div class="item row"><span class="name">국내외여행업</span><span class="val">3,000만원↑</span></div>
+    <div class="item row"><span class="name">국내여행업</span><span class="val">1,500만원↑</span></div>
+  </div>
+  <p class="note">법인은 자본금, 개인은 자산평가액을 기준으로 봐요. 금액은 개정될 수 있으니 등록 전 관할 관청에서 확인하세요.</p>
+  <div class="foot"><span>여행사 창업 조건</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 사무실 -->
+<section class="card" id="c5">
+  <div class="tag">STEP 3</div>
+  <h2>영업할 <span class="teal">사무실</span>을<br>확보하세요</h2>
+  <div class="body">
+    <div class="item"><b>소유 또는 사용권</b><span>사무실을 직접 소유하거나, 임대차 계약 등으로 사용할 권리가 있어야 해요.</span></div>
+    <div class="item"><b>임대차 계약서 준비</b><span>임차하는 경우 계약서를 등록 서류로 준비해요.</span></div>
+    <div class="item"><b>용도 확인</b><span>건물 용도상 사무실 사용이 가능한지 미리 확인하면 좋아요.</span></div>
+  </div>
+  <div class="foot"><span>여행사 창업 조건</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 보증 -->
+<section class="card" id="c6">
+  <div class="tag">STEP 4</div>
+  <h2>고객 보호를 위한<br><span class="accent">보증보험</span></h2>
+  <div class="body">
+    <div class="item"><b>왜 필요할까요?</b><span>여행사가 문제를 일으켰을 때 고객 피해를 보상하기 위한 안전장치예요.</span></div>
+    <div class="item"><b>가입 방법</b><span>보증보험 가입, 영업보증금 예치, 공제 가입 중에서 선택해요.</span></div>
+    <div class="item"><b>금액은 규모별로 달라요</b><span>업종과 매출 규모에 따라 정해지므로, 관할 관청이나 보증기관에 확인하세요.</span></div>
+  </div>
+  <div class="foot"><span>여행사 창업 조건</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 결격 -->
+<section class="card" id="c7">
+  <div class="tag">STEP 5</div>
+  <h2>이런 경우엔<br><span class="accent">등록이 제한</span>돼요</h2>
+  <div class="body">
+    <div class="item"><b>결격사유가 있는 경우</b><span>파산선고를 받고 복권되지 않은 사람 등 법에서 정한 사유에 해당하면 등록할 수 없어요.</span></div>
+    <div class="item"><b>등록 취소 이력</b><span>관광사업 등록이 취소된 뒤 일정 기간이 지나지 않은 경우도 제한돼요.</span></div>
+  </div>
+  <p class="note">정확한 결격사유는 관광진흥법에서 확인하세요.</p>
+  <div class="foot"><span>여행사 창업 조건</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 절차 -->
+<section class="card" id="c8">
+  <div class="tag">STEP 6</div>
+  <h2>등록 절차<br><span class="teal">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>업종 결정<small>종합 · 국내외 · 국내</small></p></div>
+    <div class="step"><div class="num">2</div><p>자본금·사무실 준비<small>법인 설립 또는 개인사업자 등록</small></p></div>
+    <div class="step"><div class="num">3</div><p>보증보험 가입<small>또는 공제·보증금</small></p></div>
+    <div class="step"><div class="num">4</div><p>관할 시·군·구청에 등록 신청<small>신청서와 사업계획서 등 제출</small></p></div>
+    <div class="step"><div class="num">5</div><p>등록증 발급 후 영업 시작<small>사업자등록도 함께 진행</small></p></div>
+  </div>
+  <div class="foot"><span>여행사 창업 조건</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크리스트 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>창업 전<br><span class="accent">최종 체크</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>취급할 업종을 정했나요?</span></div>
+    <div class="check"><i>✓</i><span>업종별 자본금 기준을 충족하나요?</span></div>
+    <div class="check"><i>✓</i><span>사무실 사용권을 확보했나요?</span></div>
+    <div class="check"><i>✓</i><span>보증보험(또는 공제)을 알아봤나요?</span></div>
+    <div class="check"><i>✓</i><span>결격사유에 해당하지 않나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 금액은 법령 개정으로 바뀔 수 있어요. 등록 전에 관할 시·군·구청 관광 담당 부서에서 최신 내용을 꼭 확인하세요.</p>
+  <div class="foot"><span>여행사 창업 조건</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  // ?n=3 이면 해당 카드만 표시 (캡처용)
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
