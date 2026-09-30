@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>공연장 등록 기준 카드뉴스</title>
+<style>
+  :root {
+    --bg: #2a1240;
+    --bg2: #431a5e;
+    --ink: #ffffff;
+    --muted: #d6c4e6;
+    --accent: #ffcf4d;
+    --pink: #ff7eb6;
+    --card: rgba(255,255,255,.09);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #12081c;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,126,182,.32), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,207,77,.2), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 104px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .pink { color: var(--pink); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.14);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--pink); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--pink); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 60px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 공연 창업</div>
+  <div class="spacer"></div>
+  <h1>공연장 운영,<br><span class="accent">등록 기준</span>은<br>무엇일까?</h1>
+  <p class="lead cover-sub">공연장을 열기 전에 꼭 확인할<br>핵심 조건을 차례로 정리했어요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 허가 아닌 등록 -->
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>공연장은<br>‘허가’가 아니라<br><span class="pink">‘등록’</span>이에요</h2>
+  <div class="body">
+    <div class="vs">
+      <div class="item"><b class="accent">공연법</b><span>공연장 등록 제도를 두고 있어요</span></div>
+      <div class="item"><b class="pink">시·군·구청</b><span>공연장 소재지 관할 관청에 신청해요</span></div>
+    </div>
+    <div class="item"><b>시설 기준 충족이 핵심</b><span>시설 기준을 갖추고 안전검사를 받아 등록해요.</span></div>
+  </div>
+  <div class="foot"><span>공연장 등록 기준</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 대상 -->
+<section class="card" id="c3">
+  <div class="tag">STEP 1</div>
+  <h2>어떤 시설이<br><span class="accent">등록 대상</span>일까?</h2>
+  <div class="body">
+    <div class="item"><b>공연을 위해 설치·운영하는 시설</b><span>공연 제공을 목적으로 만든 시설이 대상이에요.</span></div>
+    <div class="item"><b class="pink">연 90일 이상</b><span>1년에 90일 이상 공연을 하는 경우</span></div>
+    <div class="item"><b class="pink">계속 30일 이상</b><span>한 번에 이어서 30일 이상 공연하는 경우</span></div>
+  </div>
+  <p class="note">세부 적용 범위는 관할 관청에 확인하세요.</p>
+  <div class="foot"><span>공연장 등록 기준</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 시설 기준 -->
+<section class="card" id="c4">
+  <div class="tag">STEP 2</div>
+  <h2>갖춰야 할<br><span class="accent">시설 기준</span></h2>
+  <div class="body">
+    <div class="item"><b class="pink">무대시설</b><span>조명시설과 음향시설을 포함해요.</span></div>
+    <div class="item"><b class="pink">방음시설</b><span>공연 소리가 밖으로 새지 않도록 방음 설비를 갖춰요.</span></div>
+    <div class="item"><b>예외</b><span>객석에 천장이 없는 공연장은 방음시설을 갖추지 않아도 돼요.</span></div>
+  </div>
+  <div class="foot"><span>공연장 등록 기준</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 안전검사 -->
+<section class="card" id="c5">
+  <div class="tag">STEP 3</div>
+  <h2>등록 전<br><span class="pink">안전검사</span>는 필수</h2>
+  <div class="body">
+    <div class="item"><b>등록 전 안전검사</b><span>무대 기계·기구는 등록 전에 안전검사를 받아요.</span></div>
+    <div class="item"><b>설계검토</b><span>무대기계·기구 40개 이상인 공연장만 대상이에요.</span></div>
+    <div class="item"><b>보완 요청에는 응해야 해요</b><span>기준에 못 미치면 보완·개수 요청을 따라요.</span></div>
+  </div>
+  <div class="foot"><span>공연장 등록 기준</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 서류 -->
+<section class="card" id="c6">
+  <div class="tag">STEP 4</div>
+  <h2>준비할<br><span class="accent">제출 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>공연장 등록 신청서</span></div>
+    <div class="check"><i>✓</i><span>시설설치내역서</span></div>
+    <div class="check"><i>✓</i><span>시설 평면도 · 배치도</span></div>
+    <div class="check"><i>✓</i><span>부동산 소유권 또는<br>사용권 증명 서류</span></div>
+    <div class="check"><i>✓</i><span>안전검사 결과 서류<br>(설계검토 대상이면 그 결과도)</span></div>
+    <div class="check"><i>✓</i><span>전기안전점검확인서</span></div>
+  </div>
+  <p class="note">지자체별로 요구 서류가 다를 수 있어요.</p>
+  <div class="foot"><span>공연장 등록 기준</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 반려 사유 -->
+<section class="card" id="c7">
+  <div class="tag">주의</div>
+  <h2>이런 경우<br><span class="pink">등록이 반려</span>돼요</h2>
+  <div class="body">
+    <div class="item"><b>시설 기준 미달</b><span>무대시설(조명·음향)이나 방음시설이 갖춰지지 않은 경우</span></div>
+    <div class="item"><b>안전 기준 미달</b><span>설계검토나 안전검사 기준을 충족하지 못한 경우</span></div>
+    <div class="item"><b>법령 위반</b><span>관련 법령을 위반한 사항이 있는 경우</span></div>
+  </div>
+  <div class="foot"><span>공연장 등록 기준</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 절차 -->
+<section class="card" id="c8">
+  <div class="tag">STEP 5</div>
+  <h2>등록 절차<br><span class="pink">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>시설 기준 갖추기<small>무대시설 · 방음시설</small></p></div>
+    <div class="step"><div class="num">2</div><p>등록 전 안전검사<small>필요하면 설계검토도</small></p></div>
+    <div class="step"><div class="num">3</div><p>서류 준비<small>신청서 · 도면 · 사용권 서류 등</small></p></div>
+    <div class="step"><div class="num">4</div><p>관할 시·군·구청에 신청<small>온라인 제출도 가능</small></p></div>
+    <div class="step"><div class="num">5</div><p>등록증 발급<small>변경 시 변경등록 · 폐업 시 폐업신고</small></p></div>
+  </div>
+  <div class="foot"><span>공연장 등록 기준</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크리스트 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>등록 전<br><span class="accent">최종 체크</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>등록 대상 시설인가요?</span></div>
+    <div class="check"><i>✓</i><span>무대시설과 방음시설을<br>갖췄나요?</span></div>
+    <div class="check"><i>✓</i><span>등록 전 안전검사를<br>받았나요?</span></div>
+    <div class="check"><i>✓</i><span>부동산 사용권 서류가 있나요?</span></div>
+    <div class="check"><i>✓</i><span>전기안전점검확인서를<br>준비했나요?</span></div>
+  </div>
+  <p class="note">※ 기준은 법령 개정으로 바뀔 수 있어요. 등록 전에 관할 시·군·구청 담당 부서에서 최신 내용을 꼭 확인하세요.</p>
+  <div class="foot"><span>공연장 등록 기준</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
