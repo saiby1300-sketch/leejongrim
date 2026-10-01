@@ -24,6 +24,13 @@ foreach ($m in $media.data) {
         $c = Invoke-IG "$($m.id)/comments" @{ fields = "id,text,username,timestamp"; limit = "50" }
         if ($m.comments_count -gt 0 -and (-not $c.data -or $c.data.Count -eq 0)) {
             $item["raw_response"] = ($c | ConvertTo-Json -Depth 6 -Compress)
+            try {
+                $alt = Invoke-IG $m.id @{ fields = "comments{id,text,username,timestamp}" }
+                $item["raw_expand"] = ($alt | ConvertTo-Json -Depth 8 -Compress)
+                if ($alt.comments -and $alt.comments.data) { $c = $alt.comments }
+            } catch {
+                $item["raw_expand"] = "ERROR: " + $_.Exception.Message
+            }
         }
         foreach ($x in $c.data) {
             $replies = @()
