@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>일반음식점 영업신고 카드뉴스</title>
+<style>
+  :root {
+    --bg: #3b1a0e;
+    --bg2: #6a2e14;
+    --ink: #ffffff;
+    --muted: #f0d8c8;
+    --accent: #ffd166;
+    --hot: #ff8f5a;
+    --card: rgba(255,255,255,.09);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #1a0b05;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,143,90,.34), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,209,102,.22), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.14);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 56px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 외식 창업</div>
+  <div class="spacer"></div>
+  <h1>일반음식점<br><span class="accent">영업신고</span>,<br>무엇이 필요할까?</h1>
+  <p class="lead cover-sub">식당을 열기 전에 꼭 챙겨야 할<br>핵심만 차례로 정리했어요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 신고 -->
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>일반음식점은<br><span class="hot">‘신고’</span>로<br>시작해요</h2>
+  <div class="body">
+    <div class="vs">
+      <div class="item"><b class="accent">식품위생법</b><span>영업신고의 근거가 되는 법이에요</span></div>
+      <div class="item"><b class="hot">시·군·구청</b><span>보건소 위생 담당 부서에 신고해요</span></div>
+    </div>
+    <div class="item"><b>신고 대상 업종</b><span>일반음식점·휴게음식점·제과점이 해당돼요.</span></div>
+  </div>
+  <div class="foot"><span>일반음식점 영업신고</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 건축물 용도 -->
+<section class="card" id="c3">
+  <div class="tag">STEP 1</div>
+  <h2>가게 자리의<br><span class="accent">건축물 용도</span>부터</h2>
+  <div class="body">
+    <div class="item"><b class="hot">용도가 맞아야 해요</b><span>음식점 영업이 가능한 용도인지 먼저 확인해요.</span></div>
+    <div class="item"><b>신고관청도 확인해요</b><span>신고하면 관청이 건축물대장과 토지이용계획확인서를 확인해요.</span></div>
+    <div class="item"><b>계약하기 전에</b><span>용도를 미리 알아보면 시간과 비용을 아껴요.</span></div>
+  </div>
+  <div class="foot"><span>일반음식점 영업신고</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 시설 -->
+<section class="card" id="c4">
+  <div class="tag">STEP 2</div>
+  <h2>영업장 <span class="hot">시설 기준</span><br>중 일부</h2>
+  <div class="body">
+    <div class="item"><b class="hot">객실 잠금장치 금지</b><span>객실에는 잠금장치를 설치할 수 없어요.</span></div>
+    <div class="item"><b class="hot">환기가 잘 되게</b><span>연기와 유해가스가 잘 빠지게 해야 해요.</span></div>
+  </div>
+  <p class="note">시설 기준은 더 있어요. 관할 보건소에서 확인하세요.</p>
+  <div class="foot"><span>일반음식점 영업신고</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 교육 -->
+<section class="card" id="c5">
+  <div class="tag">STEP 3</div>
+  <h2>위생교육과<br><span class="accent">건강진단</span></h2>
+  <div class="body">
+    <div class="item"><b class="hot">위생교육은 미리 이수</b><span>신고 전에 교육을 받고 수료증을 받아 두세요.</span></div>
+    <div class="item"><b>교육은 업종별 협회에서</b><span>외식업 관련 협회에서 교육을 받아요.</span></div>
+    <div class="item"><b class="hot">건강진단결과서(보건증)</b><span>신고 서류이고, 건강진단은 1년마다 받아요.</span></div>
+  </div>
+  <div class="foot"><span>일반음식점 영업신고</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 공통 서류 -->
+<section class="card" id="c6">
+  <div class="tag">STEP 4</div>
+  <h2>공통으로<br><span class="accent">준비할 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>영업신고서</span></div>
+    <div class="check"><i>✓</i><span>신분증</span></div>
+    <div class="check"><i>✓</i><span>위생교육 수료증</span></div>
+    <div class="check"><i>✓</i><span>건강진단결과서(보건증)</span></div>
+    <div class="check"><i>✓</i><span>건물 임대차계약서</span></div>
+  </div>
+  <p class="note">대리로 신고하면 위임장과 대리인 신분증도 필요해요.</p>
+  <div class="foot"><span>일반음식점 영업신고</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 추가 서류 -->
+<section class="card" id="c7">
+  <div class="tag">STEP 5</div>
+  <h2>상황에 따라<br><span class="hot">더 필요한 서류</span></h2>
+  <div class="body">
+    <div class="item"><b>소방 관련 서류</b><span>일정 면적 이상이면 소방 완비 증명 등이 필요해요.</span></div>
+    <div class="item"><b>LPG를 쓰는 경우</b><span>액화석유가스 사용시설 검사 서류가 필요해요.</span></div>
+    <div class="item"><b>지하수를 쓰는 경우</b><span>수질검사 성적서가 필요해요.</span></div>
+  </div>
+  <p class="note">지역과 영업장 조건에 따라 달라요. 관할 보건소에 꼭 확인하세요.</p>
+  <div class="foot"><span>일반음식점 영업신고</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 절차 -->
+<section class="card" id="c8">
+  <div class="tag">STEP 6</div>
+  <h2>신고 절차<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>건축물 용도 확인<small>가게 자리와 계약 전 점검</small></p></div>
+    <div class="step"><div class="num">2</div><p>위생교육 · 건강진단<small>수료증과 보건증 받기</small></p></div>
+    <div class="step"><div class="num">3</div><p>서류 준비<small>공통 서류와 해당 서류</small></p></div>
+    <div class="step"><div class="num">4</div><p>시·군·구청에 신고<small>수수료와 면허세 납부</small></p></div>
+    <div class="step"><div class="num">5</div><p>영업신고증 받고 영업 시작<small>신고증을 받은 뒤 영업해요</small></p></div>
+  </div>
+  <div class="foot"><span>일반음식점 영업신고</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신고 전<br><span class="accent">최종 체크</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>건물 용도가 음식점에<br>맞는지 확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>위생교육을<br>미리 받았나요?</span></div>
+    <div class="check"><i>✓</i><span>건강진단결과서를<br>준비했나요?</span></div>
+    <div class="check"><i>✓</i><span>임대차계약서가 있나요?</span></div>
+    <div class="check"><i>✓</i><span>해당되는 추가 서류를<br>확인했나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 서류는 지역과 법령 개정에 따라 달라질 수 있어요. 신고 전에 관할 시·군·구청(보건소)에서 최신 내용을 꼭 확인하세요.</p>
+  <div class="foot"><span>일반음식점 영업신고</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
