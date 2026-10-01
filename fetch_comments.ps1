@@ -47,7 +47,11 @@ foreach ($m in $media.data) {
     $out += $item
 }
 
-$json = [ordered]@{ fetched_at = (Get-Date).ToUniversalTime().ToString("o"); posts = $out } | ConvertTo-Json -Depth 8
+# Short one-way fingerprint (not the token) so a token replacement can be detected between runs
+$sha = [System.Security.Cryptography.SHA256]::Create()
+$fp = ([BitConverter]::ToString($sha.ComputeHash([Text.Encoding]::UTF8.GetBytes($token))) -replace "-", "").Substring(0, 8).ToLower()
+
+$json = [ordered]@{ fetched_at = (Get-Date).ToUniversalTime().ToString("o"); token_fingerprint = $fp; posts = $out } | ConvertTo-Json -Depth 8
 Set-Content -Path "comments.json" -Value $json -Encoding UTF8
 $count = ($out | ForEach-Object { $_.comments.Count } | Measure-Object -Sum).Sum
 Write-Host "Posts: $($out.Count)  Comments: $count"
