@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>통신판매업 신고 카드뉴스</title>
+<style>
+  :root {
+    --bg: #0c2a3a;
+    --bg2: #14566f;
+    --ink: #ffffff;
+    --muted: #cfe6ee;
+    --accent: #ffd166;
+    --hot: #4fe0c0;
+    --card: rgba(255,255,255,.09);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #06141c;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(79,224,192,.30), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,209,102,.20), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.14);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 56px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 온라인 창업</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">통신판매업</span><br>신고,<br>무엇이 필요할까?</h1>
+  <p class="lead cover-sub">온라인 판매를 시작하기 전에<br>꼭 챙겨야 할 핵심만 정리했어요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 대상 -->
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>온라인으로 팔려면<br><span class="hot">‘신고’</span>가 필요해요</h2>
+  <div class="body">
+    <div class="vs">
+      <div class="item"><b class="accent">전자상거래법</b><span>통신판매업 신고의 근거 법이에요</span></div>
+      <div class="item"><b class="hot">시·군·구청</b><span>관할 지자체에 신고해요</span></div>
+    </div>
+    <div class="item"><b>신고 대상</b><span>통신판매업을 하는 사업자가 신고 대상이에요.</span></div>
+  </div>
+  <div class="foot"><span>통신판매업 신고</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 사업자등록 -->
+<section class="card" id="c3">
+  <div class="tag">STEP 1</div>
+  <h2><span class="accent">사업자등록</span>을<br>먼저 준비해요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">사업자등록증</b><span>신고 서류에 사업자등록증이 포함돼요.</span></div>
+    <div class="item"><b>제출을 줄일 수도 있어요</b><span>행정정보 공동이용에 동의하면 서류가 줄어요.</span></div>
+  </div>
+  <p class="note">제출 방식은 지자체마다 다를 수 있어요.</p>
+  <div class="foot"><span>통신판매업 신고</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 구매안전서비스 -->
+<section class="card" id="c4">
+  <div class="tag">STEP 2</div>
+  <h2>구매안전서비스<br><span class="hot">이용확인증</span></h2>
+  <div class="body">
+    <div class="item"><b class="hot">자체 쇼핑몰이라면</b><span>은행, 결제대행사(PG), 보험회사에서 발급받아요.</span></div>
+    <div class="item"><b class="hot">오픈마켓을 쓴다면</b><span>이용하는 오픈마켓에서 발급받아요.</span></div>
+    <div class="item"><b>해당하지 않을 때</b><span>비적용 확인서를 제출해야 해요.</span></div>
+  </div>
+  <div class="foot"><span>통신판매업 신고</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 개인 -->
+<section class="card" id="c5">
+  <div class="tag">STEP 3</div>
+  <h2><span class="accent">개인사업자</span>의<br>제출 서류</h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>통신판매업 신고서</span></div>
+    <div class="check"><i>✓</i><span>신분증</span></div>
+    <div class="check"><i>✓</i><span>사업자등록증</span></div>
+    <div class="check"><i>✓</i><span>구매안전서비스<br>이용확인증</span></div>
+  </div>
+  <p class="note">대표자 본인이 아니면 위임장 등이 더 필요해요.</p>
+  <div class="foot"><span>통신판매업 신고</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 법인 -->
+<section class="card" id="c6">
+  <div class="tag">STEP 4</div>
+  <h2><span class="hot">법인</span>은<br>서류가 더 있어요</h2>
+  <div class="body">
+    <div class="item"><b>개인사업자 서류 +</b><span>신고서, 신분증, 사업자등록증, 이용확인증</span></div>
+    <div class="item"><b class="hot">법인등기부등본</b><span>법인만 추가로 내는 서류예요.</span></div>
+    <div class="item"><b class="hot">대리 방문 시</b><span>위임장과 도장(법인은 법인인감)이 필요해요.</span></div>
+  </div>
+  <div class="foot"><span>통신판매업 신고</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 방법 -->
+<section class="card" id="c7">
+  <div class="tag">STEP 5</div>
+  <h2>신고는<br><span class="accent">두 가지 방법</span>이 있어요</h2>
+  <div class="body">
+    <div class="vs">
+      <div class="item"><b class="hot">방문 신고</b><span>시·군·구청의 담당 부서에 직접 가요</span></div>
+      <div class="item"><b class="hot">온라인 신고</b><span>정부24에서 신청해요</span></div>
+    </div>
+    <div class="item"><b>면허세도 있어요</b><span>신고증을 받을 때 면허세가 부과돼요. 금액은 지역별로 확인하세요.</span></div>
+  </div>
+  <div class="foot"><span>통신판매업 신고</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 절차 -->
+<section class="card" id="c8">
+  <div class="tag">STEP 6</div>
+  <h2>신고 절차<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>사업자등록<small>사업자등록증 준비</small></p></div>
+    <div class="step"><div class="num">2</div><p>이용확인증 발급<small>은행·PG사·오픈마켓 등</small></p></div>
+    <div class="step"><div class="num">3</div><p>서류 준비<small>개인·법인에 맞게</small></p></div>
+    <div class="step"><div class="num">4</div><p>방문 또는 정부24 신고<small>시·군·구청 관할</small></p></div>
+    <div class="step"><div class="num">5</div><p>신고증 받고 영업 시작<small>면허세 납부 안내를 확인해요</small></p></div>
+  </div>
+  <div class="foot"><span>통신판매업 신고</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신고 전<br><span class="accent">최종 체크</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>사업자등록증이<br>준비됐나요?</span></div>
+    <div class="check"><i>✓</i><span>구매안전서비스<br>이용확인증을 받았나요?</span></div>
+    <div class="check"><i>✓</i><span>개인·법인에 맞는<br>서류를 챙겼나요?</span></div>
+    <div class="check"><i>✓</i><span>변경·폐업 때도<br>신고가 필요함을 알고 있나요?</span></div>
+  </div>
+  <p class="note">※ 서류와 절차는 지역과 법령 개정에 따라 달라질 수 있어요. 신고 전에 관할 시·군·구청에서 최신 내용을 꼭 확인하세요.</p>
+  <div class="foot"><span>통신판매업 신고</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
