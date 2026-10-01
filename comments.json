@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-01T04:16:39.4926379Z",
+  "fetched_at": "2026-10-01T04:17:36.7813434Z",
   "posts": [
     {
       "media_id": "17993867229052008",
@@ -16,7 +16,8 @@
       "title": "일반음식점 영업신고, 무엇이 필요할까? 🍽️",
       "comments_count": 2,
       "comments": [],
-      "raw_response": "{\"data\":[],\"paging\":{\"cursors\":{\"before\":\"QVFIVGJVdlZAhVVUxUDVmV3VUWGVuUlJuZAmpKM0VUZAFB1UWEzYk82ZA1kyc2cwajVLRzBBcVNGTEJleWlrVE1MZAGJCeWdTNUZAaRmxMY29DSkwxaTFlRHB1aEVB\",\"after\":\"QVFIVGl5QlFIMnZAzeHJJSHpTeWhnZAmhhYzdYa0xEQkJob1Bwa3pGQ1pBMWhVdElfYU1mMDJtU1RRVURaX3BESzRucjNBYnhRX25ZAQkRJU0d6dkdPNlp1QXd3\"}}}"
+      "raw_response": "{\"data\":[],\"paging\":{\"cursors\":{\"before\":\"QVFIVGJVdlZAhVVUxUDVmV3VUWGVuUlJuZAmpKM0VUZAFB1UWEzYk82ZA1kyc2cwajVLRzBBcVNGTEJleWlrVE1MZAGJCeWdTNUZAaRmxMY29DSkwxaTFlRHB1aEVB\",\"after\":\"QVFIVGl5QlFIMnZAzeHJJSHpTeWhnZAmhhYzdYa0xEQkJob1Bwa3pGQ1pBMWhVdElfYU1mMDJtU1RRVURaX3BESzRucjNBYnhRX25ZAQkRJU0d6dkdPNlp1QXd3\"}}}",
+      "raw_expand": "{\"id\":\"18020738843926711\"}"
     },
     {
       "media_id": "18634118212029336",
