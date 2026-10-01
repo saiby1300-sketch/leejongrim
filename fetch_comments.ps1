@@ -14,12 +14,12 @@ function Invoke-IG($path, $params) {
     return Invoke-RestMethod -Method Get -Uri "$base/$path`?$($pairs -join '&')"
 }
 
-$media = Invoke-IG "me/media" @{ fields = "id,caption,permalink,timestamp"; limit = "10" }
+$media = Invoke-IG "me/media" @{ fields = "id,caption,permalink,timestamp,comments_count"; limit = "10" }
 $out = @()
 foreach ($m in $media.data) {
     $cap = ""
     if ($m.caption) { $cap = ($m.caption -split "`n")[0] }
-    $item = [ordered]@{ media_id = $m.id; permalink = $m.permalink; posted = $m.timestamp; title = $cap; comments = @() }
+    $item = [ordered]@{ media_id = $m.id; permalink = $m.permalink; posted = $m.timestamp; title = $cap; comments_count = $m.comments_count; comments = @() }
     try {
         $c = Invoke-IG "$($m.id)/comments" @{ fields = "id,text,username,timestamp,replies{id,text,username,timestamp}"; limit = "50" }
         foreach ($x in $c.data) {
