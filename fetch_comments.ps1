@@ -21,7 +21,10 @@ foreach ($m in $media.data) {
     if ($m.caption) { $cap = ($m.caption -split "`n")[0] }
     $item = [ordered]@{ media_id = $m.id; permalink = $m.permalink; posted = $m.timestamp; title = $cap; comments_count = $m.comments_count; comments = @() }
     try {
-        $c = Invoke-IG "$($m.id)/comments" @{ fields = "id,text,username,timestamp,replies{id,text,username,timestamp}"; limit = "50" }
+        $c = Invoke-IG "$($m.id)/comments" @{ fields = "id,text,username,timestamp"; limit = "50" }
+        if ($m.comments_count -gt 0 -and (-not $c.data -or $c.data.Count -eq 0)) {
+            $item["raw_response"] = ($c | ConvertTo-Json -Depth 6 -Compress)
+        }
         foreach ($x in $c.data) {
             $replies = @()
             if ($x.replies -and $x.replies.data) {
