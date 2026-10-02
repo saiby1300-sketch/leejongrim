@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>장기요양기관 지정 카드뉴스</title>
+<style>
+  :root {
+    --bg: #f8f3e8;
+    --bg2: #e9dcc2;
+    --ink: #1f2937;
+    --muted: #4b5563;
+    --accent: #b45309;
+    --hot: #0f766e;
+    --card: rgba(255,255,255,.72);
+    --line: rgba(31,41,55,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #d9d2c0;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(15,118,110,.22), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(180,83,9,.16), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: #fff; background: var(--ink);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 96px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid var(--line);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: #fff;
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 56px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 복지 창업</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">장기요양기관 지정</span>,<br>접수부터 지정서까지<br><span class="hot">이 순서</span>예요</h1>
+  <p class="lead cover-sub">방문요양·시설 운영을 준비한다면<br>먼저 훑어보세요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 종류 -->
+<section class="card" id="c2">
+  <div class="tag">개념 잡기</div>
+  <h2>장기요양기관은<br><span class="hot">두 갈래</span>예요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">재가급여</b><span>집에서 받는 방문요양, 방문간호 같은 서비스예요.</span></div>
+    <div class="item"><b class="hot">시설급여</b><span>시설에서 생활하며 받는 서비스예요.</span></div>
+  </div>
+  <p class="note">제공할 급여 종류별로 정원도 정해서 신청해요.</p>
+  <div class="foot"><span>장기요양기관 지정</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 신청 기관 -->
+<section class="card" id="c3">
+  <div class="tag">1단계</div>
+  <h2>신청은<br><span class="accent">시·군·구청</span>에서</h2>
+  <div class="body">
+    <div class="item"><b class="hot">관할 지자체에 제출</b><span>시장·군수·구청장에게 지정신청서를 내요.</span></div>
+    <div class="item"><b class="hot">근거 법</b><span>노인장기요양보험법에 따라 지정돼요.</span></div>
+  </div>
+  <p class="note">방문 신청이 기본이에요. 방식은 지자체에 확인하세요.</p>
+  <div class="foot"><span>장기요양기관 지정</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 서류 -->
+<section class="card" id="c4">
+  <div class="tag">2단계</div>
+  <h2><span class="accent">서류</span>를 모아요</h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>장기요양기관 지정신청서</span></div>
+    <div class="check"><i>✓</i><span>사업자등록증 사본</span></div>
+    <div class="check"><i>✓</i><span>사업계획서</span></div>
+    <div class="check"><i>✓</i><span>운영규정</span></div>
+    <div class="check"><i>✓</i><span>시설장 자격증 사본</span></div>
+  </div>
+  <p class="note">인력·시설 현황 서류도 함께 내요. 급여 종류에 따라 달라요.</p>
+  <div class="foot"><span>장기요양기관 지정</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 서류심사 -->
+<section class="card" id="c5">
+  <div class="tag">3단계</div>
+  <h2>접수하면<br><span class="hot">서류 심사</span>예요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">접수와 검토</b><span>사전 상담 후 제출 서류를 확인해요.</span></div>
+    <div class="item"><b class="accent">무엇을 보나요?</b><span>급여 제공 이력, 행정처분 내용, 운영계획을 살펴요.</span></div>
+  </div>
+  <div class="foot"><span>장기요양기관 지정</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 현지확인 -->
+<section class="card" id="c6">
+  <div class="tag">4단계</div>
+  <h2><span class="accent">현지 확인</span>을<br>나와요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">시설 점검</b><span>시설 기준을 갖췄는지 현장에서 확인해요.</span></div>
+    <div class="item"><b class="hot">인력 점검</b><span>인력 기준을 채웠는지도 확인해요.</span></div>
+  </div>
+  <p class="note">기준을 채우지 못하면 서류가 반려될 수 있어요.</p>
+  <div class="foot"><span>장기요양기관 지정</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 심사·지정 -->
+<section class="card" id="c7">
+  <div class="tag">5단계</div>
+  <h2>심사 뒤<br><span class="hot">지정서</span>를 받아요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">지정 심사위원회</b><span>지정 기준에 맞는지 심사해요.</span></div>
+    <div class="item"><b class="accent">지정 여부 결정</b><span>적합하면 지정하고 지정서를 보내줘요.</span></div>
+    <div class="item"><b class="accent">처리는 30일 이내</b><span>접수일부터 30일 안에 처리해요(연장될 수 있어요).</span></div>
+  </div>
+  <div class="foot"><span>장기요양기관 지정</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 사후 -->
+<section class="card" id="c8">
+  <div class="tag">6단계</div>
+  <h2>지정이 끝은<br><span class="hot">아니에요</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>지정 내용이 등록돼요<small>지정 명세가 공단에 통보돼요</small></p></div>
+    <div class="step"><div class="num">2</div><p>인력은 계속 점검해요<small>이용자 수가 바뀌면 인력도 맞춰요</small></p></div>
+    <div class="step"><div class="num">3</div><p>변경은 꼭 신고해요<small>바뀐 내용은 따로 알려야 해요</small></p></div>
+  </div>
+  <div class="foot"><span>장기요양기관 지정</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청 버튼<br><span class="accent">누르기 전에</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>제공할 급여 종류를<br>정했나요?</span></div>
+    <div class="check"><i>✓</i><span>시설·인력 기준을<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>신청 서류를<br>모두 모았나요?</span></div>
+    <div class="check"><i>✓</i><span>관할 지자체에<br>방식을 물어봤나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 서류는 급여 종류와 지역, 법령 개정에 따라 달라질 수 있어요. 신청 전 관할 시·군·구청에 꼭 확인하세요.</p>
+  <div class="foot"><span>장기요양기관 지정</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
