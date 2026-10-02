@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>농지전용허가 카드뉴스</title>
+<style>
+  :root {
+    --bg: #23260e;
+    --bg2: #5d6a1c;
+    --ink: #ffffff;
+    --muted: #e9efd2;
+    --accent: #ffd166;
+    --hot: #c9f27a;
+    --card: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f1006;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,242,122,.28), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,209,102,.20), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.16);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 56px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 토지 · 개발</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">농지전용허가</span>,<br>무엇이<br>필요할까?</h1>
+  <p class="lead cover-sub">농지에 건물을 짓기 전에<br>꼭 알아야 할 핵심을 정리했어요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 개념 -->
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>농지를 다른 용도로<br>쓰려면 <span class="hot">허가</span>가 필요해요</h2>
+  <div class="body">
+    <div class="vs">
+      <div class="item"><b class="accent">농지법</b><span>대상지가 농지일 때 적용돼요</span></div>
+      <div class="item"><b class="hot">시·군·구청</b><span>농지 소재지 관할 관청에 신청해요</span></div>
+    </div>
+    <div class="item"><b>임야는 달라요</b><span>대상지가 임야라면 산지전용허가를 확인하세요.</span></div>
+  </div>
+  <div class="foot"><span>농지전용허가</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 허가권자 -->
+<section class="card" id="c3">
+  <div class="tag">STEP 1</div>
+  <h2>규모에 따라<br><span class="accent">허가권자</span>가 달라요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">시장·군수·구청장</b><span>비교적 작은 규모는 지자체장이 허가해요.</span></div>
+    <div class="item"><b class="hot">시·도지사</b><span>규모가 커지면 시·도지사가 허가해요.</span></div>
+    <div class="item"><b class="hot">농림축산식품부</b><span>규모가 매우 크면 중앙부처가 허가해요.</span></div>
+  </div>
+  <p class="note">구체적인 면적 기준은 관할 관청에 확인하세요.</p>
+  <div class="foot"><span>농지전용허가</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 서류1 -->
+<section class="card" id="c4">
+  <div class="tag">STEP 2</div>
+  <h2><span class="accent">계획서</span>를<br>준비해요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">전용허가 신청서</b><span>관할 관청에 제출하는 기본 서식이에요.</span></div>
+    <div class="item"><b class="hot">사업계획서</b><span>전용 목적, 사업시행자와 기간 등을 담아요.</span></div>
+    <div class="item"><b class="hot">피해방지계획서</b><span>토사 유출, 폐수 등의 피해 방지 계획이에요.</span></div>
+  </div>
+  <div class="foot"><span>농지전용허가</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 서류2 -->
+<section class="card" id="c5">
+  <div class="tag">STEP 3</div>
+  <h2><span class="hot">도면과 권리</span><br>서류도 필요해요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">시설물 배치도</b><span>전용할 구역이 표시된 도면이에요.</span></div>
+    <div class="item"><b class="accent">소유권·사용권 서류</b><span>등기부등본 등으로 토지 권리를 증명해요.</span></div>
+  </div>
+  <p class="note">필요한 서류는 지자체마다 조금씩 달라요.</p>
+  <div class="foot"><span>농지전용허가</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 체크리스트 서류 -->
+<section class="card" id="c6">
+  <div class="tag">STEP 4</div>
+  <h2>제출 서류<br><span class="accent">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>농지전용허가 신청서</span></div>
+    <div class="check"><i>✓</i><span>사업계획서</span></div>
+    <div class="check"><i>✓</i><span>피해방지계획서</span></div>
+    <div class="check"><i>✓</i><span>시설물 배치도</span></div>
+    <div class="check"><i>✓</i><span>소유권·사용권 증명서류</span></div>
+  </div>
+  <p class="note">변경 허가를 받을 때는 변경 사유서가 더 필요해요.</p>
+  <div class="foot"><span>농지전용허가</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 부담금 -->
+<section class="card" id="c7">
+  <div class="tag">STEP 5</div>
+  <h2><span class="hot">농지보전부담금</span>도<br>잊지 마세요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">허가를 받으면</b><span>농지보전부담금을 내야 해요.</span></div>
+    <div class="item"><b class="accent">납부 후 허가증</b><span>부담금을 낸 뒤에 허가증을 받아요.</span></div>
+  </div>
+  <p class="note">금액은 농지 면적과 공시지가 등에 따라 달라요.</p>
+  <div class="foot"><span>농지전용허가</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 절차 -->
+<section class="card" id="c8">
+  <div class="tag">STEP 6</div>
+  <h2>허가 절차<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>신청서 제출<small>농지 소재지 관할 관청</small></p></div>
+    <div class="step"><div class="num">2</div><p>허가 기준 검토<small>관련 법령과 관련 부서 협의</small></p></div>
+    <div class="step"><div class="num">3</div><p>허가 결정<small>허가권자가 판단해요</small></p></div>
+    <div class="step"><div class="num">4</div><p>농지보전부담금 납부<small>부과 후 납부</small></p></div>
+    <div class="step"><div class="num">5</div><p>허가증 교부<small>받은 뒤에 공사를 시작해요</small></p></div>
+  </div>
+  <div class="foot"><span>농지전용허가</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청 전<br><span class="accent">최종 체크</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>대상지가 농지인지<br>임야인지 확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>허가권자를<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>계획서와 도면을<br>준비했나요?</span></div>
+    <div class="check"><i>✓</i><span>토지 권리 서류가<br>있나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 서류는 지역과 법령 개정에 따라 달라질 수 있어요. 신청 전 관할 시·군·구청에 꼭 확인하세요.</p>
+  <div class="foot"><span>농지전용허가</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
