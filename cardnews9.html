@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>숙박업 영업신고 카드뉴스</title>
+<style>
+  :root {
+    --bg: #1b1f2a;
+    --bg2: #46506b;
+    --ink: #ffffff;
+    --muted: #dde2ee;
+    --accent: #ffd166;
+    --hot: #ff9a8b;
+    --card: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0b0d13;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,154,139,.30), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,209,102,.20), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.16);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 56px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 숙박 창업</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">숙박업 영업신고</span><br>전에 챙길<br><span class="hot">6가지</span></h1>
+  <p class="lead cover-sub">서류부터 시설까지<br>놓치기 쉬운 순서대로 모았어요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 유형 -->
+<section class="card" id="c2">
+  <div class="tag">시작 전에</div>
+  <h2>숙박업은<br><span class="hot">두 가지</span>로 나뉘어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">숙박업(일반)</b><span>취사시설 없이 잠자리와 시설을 제공해요.</span></div>
+    <div class="item"><b class="hot">숙박업(생활)</b><span>취사시설을 갖추고 손님이 머물 수 있게 해요.</span></div>
+  </div>
+  <p class="note">어느 유형인지에 따라 시설 기준이 달라요.</p>
+  <div class="foot"><span>숙박업 영업신고</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 위생교육 -->
+<section class="card" id="c3">
+  <div class="tag">챙길 것 ①</div>
+  <h2><span class="accent">위생교육</span>은<br>미리 받아요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">신고 전에 이수</b><span>영업신고를 하기 전에 위생교육을 받아야 해요.</span></div>
+    <div class="item"><b class="hot">수료증을 제출해요</b><span>교육을 마치면 받는 수료증이 신고 서류예요.</span></div>
+  </div>
+  <p class="note">교육 기관은 관할 구청에서 안내해 줘요.</p>
+  <div class="foot"><span>숙박업 영업신고</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 시설 -->
+<section class="card" id="c4">
+  <div class="tag">챙길 것 ②</div>
+  <h2>영업장은<br><span class="hot">구획</span>되어야 해요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">독립된 장소</b><span>다른 영업 장소와 따로 쓰는 공간이어야 해요.</span></div>
+    <div class="item"><b class="accent">다른 용도와 분리</b><span>다른 용도 시설과 벽이나 층으로 나뉘어야 해요.</span></div>
+  </div>
+  <p class="note">건물 일부로 영업할 때의 세부 기준은 관청에 확인하세요.</p>
+  <div class="foot"><span>숙박업 영업신고</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 건물·안전 -->
+<section class="card" id="c5">
+  <div class="tag">챙길 것 ③</div>
+  <h2>건물 용도와<br><span class="accent">안전 점검</span></h2>
+  <div class="body">
+    <div class="item"><b class="hot">건축물 용도</b><span>숙박업에 맞는 용도인지 먼저 확인해요.</span></div>
+    <div class="item"><b class="hot">전기안전점검</b><span>전기안전점검확인서를 준비해요.</span></div>
+    <div class="item"><b class="hot">소방 안전시설</b><span>소방 안전시설 완비 증명이 필요할 수 있어요.</span></div>
+  </div>
+  <div class="foot"><span>숙박업 영업신고</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 기본 서류 -->
+<section class="card" id="c6">
+  <div class="tag">챙길 것 ④</div>
+  <h2>기본<br><span class="accent">제출 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>영업신고서</span></div>
+    <div class="check"><i>✓</i><span>영업시설 및 설비개요서</span></div>
+    <div class="check"><i>✓</i><span>위생교육 수료증</span></div>
+    <div class="check"><i>✓</i><span>전기안전점검확인서</span></div>
+    <div class="check"><i>✓</i><span>신분증</span></div>
+  </div>
+  <p class="note">평면도와 설계도면이 설비개요서에 들어가요.</p>
+  <div class="foot"><span>숙박업 영업신고</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 추가 서류 -->
+<section class="card" id="c7">
+  <div class="tag">챙길 것 ⑤</div>
+  <h2><span class="hot">상황에 따라</span><br>더 필요해요</h2>
+  <div class="body">
+    <div class="item"><b>임대한 건물이라면</b><span>임대차계약서가 필요해요.</span></div>
+    <div class="item"><b>배상책임을 위해</b><span>재난배상책임보험 가입 증명이 필요할 수 있어요.</span></div>
+    <div class="item"><b>가스를 쓴다면</b><span>가스 시설 검사 증명서가 필요할 수 있어요.</span></div>
+  </div>
+  <p class="note">지역과 영업장 조건에 따라 달라요.</p>
+  <div class="foot"><span>숙박업 영업신고</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 신고 후 -->
+<section class="card" id="c8">
+  <div class="tag">챙길 것 ⑥</div>
+  <h2>신고한 뒤에도<br><span class="hot">할 일</span>이 있어요</h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>영업신고증 받기<small>접수 후 신고증을 발급받아요</small></p></div>
+    <div class="step"><div class="num">2</div><p>변경이 생기면 변경신고<small>상호·소재지·면적 등이 바뀔 때</small></p></div>
+    <div class="step"><div class="num">3</div><p>그만두면 폐업신고<small>기한 안에 신고해야 해요</small></p></div>
+  </div>
+  <div class="foot"><span>숙박업 영업신고</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신고 전<br><span class="accent">마지막 점검</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>위생교육을 마쳤나요?</span></div>
+    <div class="check"><i>✓</i><span>영업장이 구획되어<br>있나요?</span></div>
+    <div class="check"><i>✓</i><span>건물 용도와 안전 점검을<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>필요한 서류를<br>모두 챙겼나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 서류는 지역과 법령 개정에 따라 달라질 수 있어요. 신고 전 관할 구청 위생 담당 부서에 꼭 확인하세요.</p>
+  <div class="foot"><span>숙박업 영업신고</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
