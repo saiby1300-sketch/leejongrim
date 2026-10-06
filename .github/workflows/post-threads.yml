@@ -1,0 +1,55 @@
+name: Post to Threads
+
+# Runs when publish_threads.txt is pushed (its text is the post id), or manually.
+# Editing threads_text.txt alone does NOT post anything.
+# The same publish_threads.txt text is never posted twice (tracked in .last_posted_threads).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publish_threads.txt'
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type yes to publish threads_text.txt'
+        required: true
+        default: 'no'
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' || github.event.inputs.confirm == 'yes' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for duplicate post
+        id: chk
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ -f .last_posted_threads ] && [ "$(cat .last_posted_threads)" = "$(cat publish_threads.txt)" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Already posted: $(cat publish_threads.txt). Skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish text post
+        if: steps.chk.outputs.skip != 'true'
+        shell: pwsh
+        env:
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+        run: ./post_threads.ps1 -Yes
+
+      - name: Record posted id
+        if: steps.chk.outputs.skip != 'true' && github.event_name == 'push'
+        shell: bash
+        run: |
+          cp publish_threads.txt .last_posted_threads
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .last_posted_threads
+          git commit -m "Record posted: $(cat publish_threads.txt)"
+          git push
