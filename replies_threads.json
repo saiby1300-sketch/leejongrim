@@ -1,19 +1,8 @@
 {
   "account": "lee_jongrim",
-  "fetched_at": "2026-10-06T06:36:11.6496956Z",
-  "pending_count": 1,
-  "pending": [
-    {
-      "reply_id": "17986535820080738",
-      "username": "slp_ppuppu",
-      "text": "반가워 치니 스팔했어😆",
-      "timestamp": "2026-10-06T06:07:22+00:00",
-      "reply_to_id": null,
-      "permalink": "https://www.threads.com/@slp_ppuppu/post/DeJGmiVEqAl",
-      "post_id": "18342969697268794",
-      "post_text": "스친들 안녕~ 나는 경기도 시흥에서 행정사 사무소 하는 행정사야 👋\n\n귀화, 화장품 제조업 등록, 의료기기 인허가 같은 \"뭐부터 해야 하지?\" 싶은 행정 절차를 쉽게 풀어서 올려볼게.\n\n어려운 서류 얘기도 최대한 편한 말로 쓸 거야. 구경만 해도 좋아!"
-    }
-  ],
+  "fetched_at": "2026-10-06T06:37:11.7274499Z",
+  "pending_count": 0,
+  "pending": [],
   "posts": [
     {
       "post_id": "18116715857050413",
