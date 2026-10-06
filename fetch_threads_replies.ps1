@@ -24,10 +24,11 @@ $pending = @()
 foreach ($p in $mine.data) {
     $conv = Invoke-TH "$($p.id)/conversation" @{ fields = "id,text,username,timestamp,reply_to_id,permalink"; reverse = "false" }
     $items = @($conv.data)
-    $answered = @{}
-    foreach ($i in $items) { if ($i.username -eq $me.username -and $i.reply_to_id) { $answered[$i.reply_to_id] = $true } }
     foreach ($i in $items) {
-        if ($i.username -ne $me.username -and -not $answered.ContainsKey($i.id)) {
+        if ($i.username -ne $me.username) {
+            # answered = I have a direct reply under this comment (reply_to_id is not always set in /conversation)
+            $kids = Invoke-TH "$($i.id)/replies" @{ fields = "id,username" }
+            if (@($kids.data | Where-Object { $_.username -eq $me.username }).Count -gt 0) { continue }
             $pending += [pscustomobject]@{
                 reply_id = $i.id; username = $i.username; text = $i.text; timestamp = $i.timestamp
                 reply_to_id = $i.reply_to_id; permalink = $i.permalink
