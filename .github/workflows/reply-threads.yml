@@ -1,0 +1,70 @@
+name: Reply on Threads
+
+# Runs when reply_threads_request.json is pushed ({"reply_to": "...", "text": "..."}), or manually.
+# Each request id is replied to only once (tracked in .last_replied_threads).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reply_threads_request.json'
+  workflow_dispatch:
+    inputs:
+      reply_to:
+        description: 'Threads reply id to answer'
+        required: true
+      text:
+        description: 'Reply text (500 chars max)'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: threads-repo-writes
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for duplicate reply
+        id: chk
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            id=$(jq -r '.reply_to' reply_threads_request.json)
+            if [ -f .last_replied_threads ] && grep -qx "$id" .last_replied_threads; then
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              echo "Already replied to $id. Skipping."
+              exit 0
+            fi
+          fi
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Post reply
+        if: steps.chk.outputs.skip != 'true'
+        shell: pwsh
+        env:
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          IN_REPLY_TO: ${{ github.event.inputs.reply_to }}
+          IN_TEXT: ${{ github.event.inputs.text }}
+        run: |
+          if ("${{ github.event_name }}" -eq "push") {
+            $req = Get-Content -Raw -Encoding UTF8 reply_threads_request.json | ConvertFrom-Json
+            ./reply_threads.ps1 -ReplyTo $req.reply_to -Text $req.text
+          } else {
+            ./reply_threads.ps1 -ReplyTo $env:IN_REPLY_TO -Text $env:IN_TEXT
+          }
+
+      - name: Record replied id
+        if: steps.chk.outputs.skip != 'true' && github.event_name == 'push'
+        shell: bash
+        run: |
+          jq -r '.reply_to' reply_threads_request.json >> .last_replied_threads
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .last_replied_threads
+          git commit -m "Record replied: $(jq -r '.reply_to' reply_threads_request.json)"
+          git pull --rebase origin main
+          git push
