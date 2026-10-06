@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>화장품 제조업 등록 카드뉴스</title>
+<style>
+  :root {
+    --bg: #fff4ec;
+    --bg2: #ffd8c4;
+    --ink: #3a1d12;
+    --muted: #6b4a3c;
+    --accent: #c2410c;
+    --hot: #0e7490;
+    --card: rgba(255,255,255,.78);
+    --line: rgba(58,29,18,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #e7cdbf;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(14,116,144,.18), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(194,65,12,.16), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: #fff; background: var(--ink);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 96px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid var(--line);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--accent); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 56px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 화장품</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">화장품 제조업 등록</span>,<br>어디에 어떻게<br><span class="hot">신청하죠?</span></h1>
+  <p class="lead cover-sub">제조업과 책임판매업의 차이부터<br>신청 방법까지 짚어 드려요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 두 가지 등록 -->
+<section class="card" id="c2">
+  <div class="tag">먼저 구분하기</div>
+  <h2>등록은<br><span class="hot">두 가지</span>예요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">제조업 등록</b><span>제조업소 시설 확인까지 받아요.</span></div>
+    <div class="item"><b class="hot">책임판매업 등록</b><span>시설 확인 없이 서류와 신원조회로 진행해요.</span></div>
+  </div>
+  <p class="note">하려는 일에 맞는 등록이 무엇인지 먼저 정하세요.</p>
+  <div class="foot"><span>화장품 제조업 등록</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 신청 기관 -->
+<section class="card" id="c3">
+  <div class="tag">어디에?</div>
+  <h2>신청은<br><span class="accent">지방식약청</span>에</h2>
+  <div class="body">
+    <div class="item"><b class="hot">관할 지방식약청</b><span>사업장 지역의 지방식약청이 맡아요.</span></div>
+    <div class="item"><b class="hot">지역별로 나뉘어요</b><span>서울청·부산청 등 관할이 정해져 있어요.</span></div>
+  </div>
+  <div class="foot"><span>화장품 제조업 등록</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 신청 방법 -->
+<section class="card" id="c4">
+  <div class="tag">어떻게?</div>
+  <h2>접수는<br><span class="hot">인터넷이 편해요</span></h2>
+  <div class="body">
+    <div class="item"><b class="accent">인터넷 접수</b><span>의약품안전나라 사이트에서 신청해요.</span></div>
+    <div class="item"><b class="accent">우편 접수</b><span>관할 지방식약청으로 서류를 보내요.</span></div>
+  </div>
+  <p class="note">방문 접수는 청마다 달라요. 관할 청에 확인하세요.</p>
+  <div class="foot"><span>화장품 제조업 등록</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 제조업 절차 -->
+<section class="card" id="c5">
+  <div class="tag">제조업은</div>
+  <h2>심사는<br><span class="accent">세 단계</span>예요</h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>구비서류 확인<small>제출한 서류를 살펴봐요</small></p></div>
+    <div class="step"><div class="num">2</div><p>대표자 신원조회<small>대표자의 신원을 확인해요</small></p></div>
+    <div class="step"><div class="num">3</div><p>제조업소 시설 확인<small>시설이 기준에 맞는지 점검해요</small></p></div>
+  </div>
+  <div class="foot"><span>화장품 제조업 등록</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 책임판매업 절차 -->
+<section class="card" id="c6">
+  <div class="tag">책임판매업은</div>
+  <h2>심사는<br><span class="hot">두 단계</span>예요</h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>구비서류 확인<small>제출한 서류를 살펴봐요</small></p></div>
+    <div class="step"><div class="num">2</div><p>대표자 신원조회<small>대표자의 신원을 확인해요</small></p></div>
+  </div>
+  <p class="note">시설 확인 단계가 없다는 점이 제조업과 달라요.</p>
+  <div class="foot"><span>화장품 제조업 등록</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 처리기한 -->
+<section class="card" id="c7">
+  <div class="tag">얼마나?</div>
+  <h2>처리 기한은<br><span class="accent">이렇게</span> 달라요</h2>
+  <div class="body">
+    <div class="vs">
+      <div class="item"><b class="accent">제조업</b><span>15일</span></div>
+      <div class="item"><b class="hot">책임판매업</b><span>10일</span></div>
+    </div>
+    <div class="item"><b>변경할 때도 기한이 있어요</b><span>책임판매관리자만 바꾸면 7일이에요.</span></div>
+  </div>
+  <p class="note">기한은 접수 상황에 따라 달라질 수 있어요.</p>
+  <div class="foot"><span>화장품 제조업 등록</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 서류와 등록 후 -->
+<section class="card" id="c8">
+  <div class="tag">그다음은?</div>
+  <h2>서류와<br><span class="hot">등록 후</span> 할 일</h2>
+  <div class="body">
+    <div class="item"><b class="accent">구비서류</b><span>지방식약청 안내문(신청양식 포함)에서 확인해요.</span></div>
+    <div class="item"><b class="accent">등록면허세</b><span>등록 후 관할 지자체에 납부해요.</span></div>
+    <div class="item"><b class="accent">변경이 생기면</b><span>변경등록을 따로 해야 해요.</span></div>
+  </div>
+  <div class="foot"><span>화장품 제조업 등록</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청 누르기 전<br><span class="accent">마지막 확인</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>제조업인지 책임판매업인지<br>정했나요?</span></div>
+    <div class="check"><i>✓</i><span>관할 지방식약청을<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>구비서류 안내문을<br>받아 봤나요?</span></div>
+    <div class="check"><i>✓</i><span>등록면허세 납부를<br>알고 있나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 서류는 법령 개정에 따라 달라질 수 있어요. 신청 전 관할 지방식약청에 꼭 확인하세요.</p>
+  <div class="foot"><span>화장품 제조업 등록</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
