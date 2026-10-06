@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>귀화 신청 카드뉴스</title>
+<style>
+  :root {
+    --bg: #f5f1fc;
+    --bg2: #dcd0f3;
+    --ink: #231b3a;
+    --muted: #4d4466;
+    --accent: #6d28d9;
+    --hot: #be185d;
+    --card: rgba(255,255,255,.76);
+    --line: rgba(35,27,58,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #cfc6e2;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(190,24,93,.18), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(109,40,217,.18), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: #fff; background: var(--ink);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid var(--line);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--accent); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 출입국</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">귀화 신청</span> 전에<br>먼저<br><span class="hot">알아둘 것</span></h1>
+  <p class="lead cover-sub">국적 취득의 종류부터 심사 순서까지<br>핵심만 짚어 드려요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 종류 -->
+<section class="card" id="c2">
+  <div class="tag">종류부터</div>
+  <h2>귀화는<br><span class="hot">세 갈래</span>로 나뉘어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">일반귀화</b><span>가장 기본이 되는 경로예요.</span></div>
+    <div class="item"><b class="hot">간이귀화</b><span>한국인과 혼인한 외국인이 더 쉽게 신청해요.</span></div>
+    <div class="item"><b class="accent">특별귀화</b><span>별도의 요건을 갖춘 경우예요.</span></div>
+  </div>
+  <div class="foot"><span>국적 취득</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 일반귀화 요건 -->
+<section class="card" id="c3">
+  <div class="tag">일반귀화</div>
+  <h2>기본 요건<br><span class="accent">다섯 가지</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>5년 이상 계속 거주</span></div>
+    <div class="check"><i>✓</i><span>성년(만 19세 이상)</span></div>
+    <div class="check"><i>✓</i><span>품행이 단정할 것</span></div>
+    <div class="check"><i>✓</i><span>생계를 유지할 능력</span></div>
+    <div class="check"><i>✓</i><span>국어 능력과<br>한국 풍습 이해</span></div>
+  </div>
+  <p class="note">간이귀화·특별귀화는 요건이 달라요.</p>
+  <div class="foot"><span>국적 취득</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 간이귀화 -->
+<section class="card" id="c4">
+  <div class="tag">간이귀화</div>
+  <h2>기준은<br><span class="hot">법률상 혼인</span>이에요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">혼인신고가 필요해요</b><span>한국인 배우자와 법률상 혼인신고를 해야 해요.</span></div>
+    <div class="item"><b class="hot">사실혼은 달라요</b><span>혼인신고 없는 사실혼은 일반귀화 대상이에요.</span></div>
+  </div>
+  <p class="note">혼인 뒤 거주해야 하는 기간도 정해져 있어요.</p>
+  <div class="foot"><span>국적 취득</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 신청 -->
+<section class="card" id="c5">
+  <div class="tag">1단계</div>
+  <h2>귀화 허가는<br><span class="accent">출입국·외국인청</span>에</h2>
+  <div class="body">
+    <div class="item"><b class="hot">어디에 내나요?</b><span>출입국·외국인청이나 사무소에 신청해요.</span></div>
+    <div class="item"><b class="hot">무엇을 내나요?</b><span>외국인 증명 서류와 생계 유지 능력을 보여 주는 서류 등이에요.</span></div>
+  </div>
+  <p class="note">필요한 서류는 신청 유형별로 달라요.</p>
+  <div class="foot"><span>국적 취득</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 요건 심사 -->
+<section class="card" id="c6">
+  <div class="tag">2단계</div>
+  <h2>신청하면<br><span class="hot">요건 심사</span>가 시작돼요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">신원조회</b><span>신원을 확인해요.</span></div>
+    <div class="item"><b class="accent">범죄경력조회</b><span>범죄 경력을 확인해요.</span></div>
+    <div class="item"><b class="accent">체류동향조사</b><span>체류 상황을 살펴봐요. 현지조사를 할 수도 있어요.</span></div>
+  </div>
+  <div class="foot"><span>국적 취득</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 적격심사 -->
+<section class="card" id="c7">
+  <div class="tag">3단계</div>
+  <h2><span class="accent">귀화적격심사</span>를<br>받아요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">종합평가와 면접</b><span>한국어와 한국 사회 이해를 확인해요.</span></div>
+    <div class="item"><b class="hot">면제되는 경우도 있어요</b><span>사회통합프로그램 이수자는 면제돼요.</span></div>
+  </div>
+  <p class="note">면제 대상은 안내에서 꼭 확인하세요.</p>
+  <div class="foot"><span>국적 취득</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 완료 -->
+<section class="card" id="c8">
+  <div class="tag">4단계</div>
+  <h2>국적은<br><span class="hot">언제 생길까요?</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>귀화허가 신청<small>출입국·외국인청에 제출</small></p></div>
+    <div class="step"><div class="num">2</div><p>귀화 요건 심사<small>신원·범죄경력·체류동향</small></p></div>
+    <div class="step"><div class="num">3</div><p>귀화적격심사<small>종합평가와 면접</small></p></div>
+    <div class="step"><div class="num">4</div><p>국민선서와 귀화증서<small>증서를 받은 때 국적을 취득해요</small></p></div>
+  </div>
+  <div class="foot"><span>국적 취득</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청하기 전<br><span class="accent">스스로 점검</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>내가 어느 귀화에<br>해당하는지 알았나요?</span></div>
+    <div class="check"><i>✓</i><span>거주기간과 요건을<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>생계를 보여 줄<br>서류가 있나요?</span></div>
+    <div class="check"><i>✓</i><span>심사 순서를<br>이해했나요?</span></div>
+  </div>
+  <p class="note">※ 요건과 서류는 법령 개정과 개별 사정에 따라 달라질 수 있어요. 신청 전 관할 출입국·외국인청에 꼭 확인하세요.</p>
+  <div class="foot"><span>국적 취득</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
