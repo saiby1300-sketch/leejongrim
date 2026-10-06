@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>의료기기 인허가 카드뉴스</title>
+<style>
+  :root {
+    --bg: #05303a;
+    --bg2: #0f6b7a;
+    --ink: #ffffff;
+    --muted: #d3eef2;
+    --accent: #ffd166;
+    --hot: #8ff0d6;
+    --card: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #021a20;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(143,240,214,.28), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,209,102,.20), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.16);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 52px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 의료기기</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">의료기기 인허가</span>,<br>놓치기 쉬운<br><span class="hot">4가지</span></h1>
+  <p class="lead cover-sub">등급부터 접수 방법까지<br>헷갈리는 부분만 짚어 드려요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<!-- 2 등급 -->
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>등급이<br><span class="hot">길을 정해요</span></h2>
+  <div class="body">
+    <div class="item"><b class="accent">1등급</b><span>신고로 진행해요.</span></div>
+    <div class="item"><b class="accent">2등급</b><span>인증으로 진행해요.</span></div>
+    <div class="item"><b class="accent">3·4등급</b><span>허가를 받아야 해요.</span></div>
+  </div>
+  <div class="foot"><span>의료기기 인허가</span><span>2 / 9</span></div>
+</section>
+
+<!-- 3 ① -->
+<section class="card" id="c3">
+  <div class="tag">놓치기 쉬운 점 ①</div>
+  <h2>3·4등급은<br><span class="accent">전부 허가</span> 대상</h2>
+  <div class="body">
+    <div class="item"><b class="hot">예외가 없어요</b><span>3등급과 4등급 의료기기는 모두 허가 대상이에요.</span></div>
+    <div class="item"><b class="hot">신고·인증과 달라요</b><span>허가는 별도의 심사를 거쳐요.</span></div>
+  </div>
+  <div class="foot"><span>의료기기 인허가</span><span>3 / 9</span></div>
+</section>
+
+<!-- 4 ② -->
+<section class="card" id="c4">
+  <div class="tag">놓치기 쉬운 점 ②</div>
+  <h2>1·2등급도<br><span class="hot">허가</span>일 수 있어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">일부는 허가 대상</b><span>조합 제품, 기존과 본질이 다른 제품 등이에요.</span></div>
+    <div class="item"><b class="accent">등급만 보지 마세요</b><span>제품 특성에 따라 처리 방식이 달라져요.</span></div>
+  </div>
+  <p class="note">해당 여부는 식약처 안내에서 꼭 확인하세요.</p>
+  <div class="foot"><span>의료기기 인허가</span><span>4 / 9</span></div>
+</section>
+
+<!-- 5 ③ -->
+<section class="card" id="c5">
+  <div class="tag">놓치기 쉬운 점 ③</div>
+  <h2><span class="accent">업 허가</span>는<br>따로 있어요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">제품 허가와 별개예요</b><span>의료기기 제조·수입업 허가 민원이 따로 있어요.</span></div>
+    <div class="item"><b class="hot">둘 다 챙기세요</b><span>사업을 하려면 업과 제품을 각각 확인해야 해요.</span></div>
+  </div>
+  <div class="foot"><span>의료기기 인허가</span><span>5 / 9</span></div>
+</section>
+
+<!-- 6 ④ -->
+<section class="card" id="c6">
+  <div class="tag">놓치기 쉬운 점 ④</div>
+  <h2>접수는<br><span class="hot">전자민원</span>으로</h2>
+  <div class="body">
+    <div class="item"><b class="accent">인터넷 접수</b><span>의료기기전자민원시스템에서 신청해요.</span></div>
+    <div class="item"><b class="accent">방문·우편도 가능</b><span>방식은 안내에서 확인하세요.</span></div>
+  </div>
+  <div class="foot"><span>의료기기 인허가</span><span>6 / 9</span></div>
+</section>
+
+<!-- 7 절차 -->
+<section class="card" id="c7">
+  <div class="tag">흐름 정리</div>
+  <h2>준비 순서<br><span class="accent">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>제품 등급 확인<small>1~4등급 중 어디인지</small></p></div>
+    <div class="step"><div class="num">2</div><p>처리 방식 확인<small>신고·인증·허가 중 무엇인지</small></p></div>
+    <div class="step"><div class="num">3</div><p>업 허가 확인<small>제조·수입업 허가가 필요한지</small></p></div>
+    <div class="step"><div class="num">4</div><p>전자민원 접수<small>필요한 서류를 준비해 신청해요</small></p></div>
+  </div>
+  <div class="foot"><span>의료기기 인허가</span><span>7 / 9</span></div>
+</section>
+
+<!-- 8 기간 -->
+<section class="card" id="c8">
+  <div class="tag">참고</div>
+  <h2>기간과 비용은<br><span class="hot">제품마다</span> 달라요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">심사 종류에 따라</b><span>필요한 심사가 다르면 처리 기간도 달라져요.</span></div>
+    <div class="item"><b class="accent">수수료도 달라요</b><span>정확한 금액은 전자민원 안내에서 확인하세요.</span></div>
+  </div>
+  <div class="foot"><span>의료기기 인허가</span><span>8 / 9</span></div>
+</section>
+
+<!-- 9 체크 -->
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청 전<br><span class="accent">마지막 점검</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>제품 등급을<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>신고·인증·허가 중<br>무엇인지 알았나요?</span></div>
+    <div class="check"><i>✓</i><span>업 허가가 필요한지<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>전자민원 접수 방법을<br>알아봤나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 절차는 법령 개정과 제품 특성에 따라 달라질 수 있어요. 신청 전 식약처에 꼭 확인하세요.</p>
+  <div class="foot"><span>의료기기 인허가</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
