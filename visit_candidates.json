@@ -1,11 +1,5 @@
 {
-  "fetched_at": "2026-10-07T01:35:06.6015596Z",
-  "commenters_total": 7,
-  "candidates": [],
-  "errors": [
-    {
-      "username": "winwin_ispi_1",
-      "error": "\n{\n  \"error\": {\n    \"message\": \"Application does not have permission for this action\",\n    \"type\": \"THApiException\",\n    \"code\": 10,\n    \"fbtrace_id\": \"AJtKNhn1WbBHD9SaQ8uhYK0\"\n  }\n}"
-    }
-  ]
+  "probe_user": "lee_jongrim",
+  "result": "FAIL  { \"error\": { \"message\": \"Application does not have permission for this action\", \"type\": \"THApiException\", \"code\": 10, \"fbtrace_id\": \"AAKOykGBeNCKj62lMmcmOpz\" } }",
+  "at": "2026-10-07T01:38:12.9200274Z"
 }
