@@ -26,6 +26,7 @@ if (Test-Path $pf) {
         $m = if ($_.ErrorDetails.Message) { $_.ErrorDetails.Message } else { $_.Exception.Message }
         $res = "FAIL " + ($m -replace '\s+',' ')
     }
+    [pscustomobject]@{ probe_user = $pu; result = $res; at = (Get-Date).ToUniversalTime().ToString('o') } | ConvertTo-Json | Set-Content -Encoding UTF8 (Join-Path $PSScriptRoot 'visit_candidates.json')
     exit 0
 }
 $visited = @()
