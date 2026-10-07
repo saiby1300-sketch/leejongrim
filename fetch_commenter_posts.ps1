@@ -15,6 +15,19 @@ function Invoke-TH($path, $params) {
     return Invoke-RestMethod -Method Get -Uri "$base/$path`?$($pairs -join '&')"
 }
 
+# Diagnostic: if probe_user.txt exists, test profile_posts for that one username and exit.
+$pf = Join-Path $PSScriptRoot "probe_user.txt"
+if (Test-Path $pf) {
+    $pu = (Get-Content $pf -Raw).Trim()
+    try {
+        $t = Invoke-TH "profile_posts" @{ username = $pu; fields = "id,timestamp"; limit = 1 }
+        Write-Host "PROBE $pu : OK ($(@($t.data).Count) posts)"
+    } catch {
+        $m = if ($_.ErrorDetails.Message) { $_.ErrorDetails.Message } else { $_.Exception.Message }
+        Write-Host "PROBE $pu : FAIL $($m -replace '\s+',' ')"
+    }
+    exit 0
+}
 $visited = @()
 $vf = Join-Path $PSScriptRoot ".visited_threads"
 if (Test-Path $vf) { $visited = @(Get-Content $vf) }
