@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-10-07T02:04:08.1315342Z",
+  "fetched_at": "2026-10-07T02:18:08.4297549Z",
   "commenters_total": 7,
   "candidates": [],
   "errors": [
     {
       "username": "winwin_ispi_1",
-      "error": "\n{\n  \"error\": {\n    \"message\": \"Application does not have permission for this action\",\n    \"type\": \"THApiException\",\n    \"code\": 10,\n    \"fbtrace_id\": \"A4mMdcif3_xEbu5iAOoybSk\"\n  }\n}"
+      "error": "\n{\n  \"error\": {\n    \"message\": \"Application does not have permission for this action\",\n    \"type\": \"OAuthException\",\n    \"code\": 10,\n    \"error_subcode\": 4279067,\n    \"is_transient\": false,\n    \"error_user_title\": \"App Does Not Have Sufficient Access Tier\",\n    \"error_user_msg\": \"The requested data cannot be accessed with the current app data access tier. App review might be required.\",\n    \"fbtrace_id\": \"A7Y7qxDBbfSxtovVeu28As5\"\n  }\n}"
     }
   ]
 }
