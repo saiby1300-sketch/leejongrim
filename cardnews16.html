@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>건설업 등록 카드뉴스</title>
+<style>
+  :root {
+    --bg: #fff8e1;
+    --bg2: #ffe08a;
+    --ink: #3b2f00;
+    --muted: #6b5a1c;
+    --accent: #b91c1c;
+    --hot: #1d4ed8;
+    --card: rgba(255,255,255,.78);
+    --line: rgba(59,47,0,.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #e6d9a8;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(185,28,28,.16), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,78,216,.14), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: #fff; background: var(--ink);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid var(--line);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: #fff;
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 52px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 건설 창업</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">건설업 등록</span>,<br>먼저 확인할<br><span class="hot">5가지</span></h1>
+  <p class="lead cover-sub">종류부터 서류까지<br>등록 전에 짚어야 할 것들이에요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<section class="card" id="c2">
+  <div class="tag">확인 ① 종류</div>
+  <h2><span class="accent">종합</span>인가요,<br><span class="hot">전문</span>인가요?</h2>
+  <div class="body">
+    <div class="item"><b class="accent">종합건설업</b><span>토목·건축·토목건축·산업환경설비·조경, 5개예요.</span></div>
+    <div class="item"><b class="hot">전문건설업</b><span>전문공사를 시공하는 업종이에요.</span></div>
+  </div>
+  <div class="foot"><span>건설업 등록</span><span>2 / 9</span></div>
+</section>
+
+<section class="card" id="c3">
+  <div class="tag">확인 ② 등록기준</div>
+  <h2>등록기준은<br><span class="hot">네 가지</span>예요</h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>기술능력</span></div>
+    <div class="check"><i>✓</i><span>자본금<br>(개인은 자산평가액)</span></div>
+    <div class="check"><i>✓</i><span>시설과 장비</span></div>
+    <div class="check"><i>✓</i><span>사무실</span></div>
+  </div>
+  <p class="note">업종마다 기준이 달라요.</p>
+  <div class="foot"><span>건설업 등록</span><span>3 / 9</span></div>
+</section>
+
+<section class="card" id="c4">
+  <div class="tag">확인 ② 예시</div>
+  <h2>예를 들어<br><span class="accent">토목건축공사업</span></h2>
+  <div class="body">
+    <div class="item"><b class="hot">기술능력</b><span>건설기술인 11명 이상이 필요해요.</span></div>
+    <div class="item"><b class="hot">자본금</b><span>법인은 8억5천만원, 개인은 17억원 이상이에요.</span></div>
+  </div>
+  <p class="note">다른 업종은 기준이 달라요. 법 개정도 확인하세요.</p>
+  <div class="foot"><span>건설업 등록</span><span>4 / 9</span></div>
+</section>
+
+<section class="card" id="c5">
+  <div class="tag">확인 ③ 사무실</div>
+  <h2>사무실도<br><span class="hot">조건</span>이 있어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">등록할 시·도 안에</b><span>등록하려는 시·도 안에 있어야 해요.</span></div>
+    <div class="item"><b class="accent">관계 법령에 맞게</b><span>건축법 등에 적합한 건물이어야 해요.</span></div>
+    <div class="item"><b class="accent">건설업 전용으로</b><span>다른 업체와 같이 쓰면 안 돼요.</span></div>
+  </div>
+  <div class="foot"><span>건설업 등록</span><span>5 / 9</span></div>
+</section>
+
+<section class="card" id="c6">
+  <div class="tag">확인 ④ 결격사유</div>
+  <h2>등록이 안 되는<br><span class="accent">경우</span>가 있어요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">결격사유에 해당하면</b><span>파산 후 복권이 안 된 경우 등이에요.</span></div>
+    <div class="item"><b class="hot">등록이 말소됐다면</b><span>말소 뒤 일정 기간이 지나야 해요.</span></div>
+  </div>
+  <p class="note">정확한 사유는 법령에서 확인하세요.</p>
+  <div class="foot"><span>건설업 등록</span><span>6 / 9</span></div>
+</section>
+
+<section class="card" id="c7">
+  <div class="tag">확인 ⑤ 서류</div>
+  <h2>신청 때<br><span class="accent">준비할 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>법인등기부등본<br>·사업자등록증</span></div>
+    <div class="check"><i>✓</i><span>임원 명단</span></div>
+    <div class="check"><i>✓</i><span>건설기술자 보유 증명서</span></div>
+    <div class="check"><i>✓</i><span>자본금 입증 서류</span></div>
+    <div class="check"><i>✓</i><span>사무실 관련 서류</span></div>
+  </div>
+  <div class="foot"><span>건설업 등록</span><span>7 / 9</span></div>
+</section>
+
+<section class="card" id="c8">
+  <div class="tag">흐름 정리</div>
+  <h2>등록 순서<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>업종과 기준 확인<small>종합·전문, 기술·자본금·사무실</small></p></div>
+    <div class="step"><div class="num">2</div><p>서류 준비<small>입증 서류를 갖춰요</small></p></div>
+    <div class="step"><div class="num">3</div><p>신청서 제출<small>지역 건설협회에 접수해요</small></p></div>
+    <div class="step"><div class="num">4</div><p>검토 후 등록증 발급<small>시·도에서 발급해요</small></p></div>
+  </div>
+  <div class="foot"><span>건설업 등록</span><span>8 / 9</span></div>
+</section>
+
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청 전<br><span class="accent">마지막 점검</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>종합인지 전문인지<br>정했나요?</span></div>
+    <div class="check"><i>✓</i><span>기술인력과 자본금이<br>기준을 채우나요?</span></div>
+    <div class="check"><i>✓</i><span>사무실 조건을<br>확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>결격사유에<br>해당하지 않나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 금액은 법령 개정에 따라 달라질 수 있어요. 등록 전 지역 건설협회와 관할 시·도에 꼭 확인하세요.</p>
+  <div class="foot"><span>건설업 등록</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
