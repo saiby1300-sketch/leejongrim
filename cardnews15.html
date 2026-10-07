@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>민간자격 등록 카드뉴스</title>
+<style>
+  :root {
+    --bg: #ecfaf3;
+    --bg2: #bfe6d4;
+    --ink: #123b2c;
+    --muted: #3f6657;
+    --accent: #b45309;
+    --hot: #0f766e;
+    --card: rgba(255,255,255,.78);
+    --line: rgba(18,59,44,.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #c7ddd2;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(180,83,9,.16), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(15,118,110,.20), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: #fff; background: var(--ink);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 96px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid var(--line);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: #fff;
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+</style>
+</head>
+<body>
+
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 교육 · 자격</div>
+  <div class="spacer"></div>
+  <h1>내 <span class="accent">민간자격</span>을<br>만들고 싶다면,<br><span class="hot">등록은 어디서부터?</span></h1>
+  <p class="lead cover-sub">등록 대상부터 절차까지<br>핵심만 짚어 드려요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<section class="card" id="c2">
+  <div class="tag">개념부터</div>
+  <h2>민간자격 등록은<br><span class="hot">무엇일까요?</span></h2>
+  <div class="body">
+    <div class="item"><b class="accent">자격을 새로 만들 때</b><span>민간자격관리자가 자격을 신설해 운영하면 등록관리기관에 등록해요.</span></div>
+    <div class="item"><b class="accent">등록대장에 기록돼요</b><span>자격 종목명, 등급, 운영기관 등이 적혀요.</span></div>
+  </div>
+  <div class="foot"><span>민간자격 등록</span><span>2 / 9</span></div>
+</section>
+
+<section class="card" id="c3">
+  <div class="tag">누가 신청해요?</div>
+  <h2><span class="accent">법인·단체</span> 또는<br><span class="hot">개인</span>이에요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">신청할 수 있어요</b><span>국내 법인, 단체 또는 개인이 신청해요.</span></div>
+    <div class="item"><b class="hot">제외되는 분야가 있어요</b><span>법령에서 정한 분야는 등록할 수 없어요.</span></div>
+  </div>
+  <div class="foot"><span>민간자격 등록</span><span>3 / 9</span></div>
+</section>
+
+<section class="card" id="c4">
+  <div class="tag">주의</div>
+  <h2>이런 경우엔<br><span class="accent">등록이 안 돼요</span></h2>
+  <div class="body">
+    <div class="item"><b class="hot">결격사유가 있는 경우</b><span>법에서 정한 결격사유에 해당하면 안 돼요.</span></div>
+    <div class="item"><b class="hot">금지 분야인 경우</b><span>생명·건강·안전, 국방에 직결된 분야 등이에요.</span></div>
+  </div>
+  <p class="note">명칭 사용이 가능한지도 확인해요.</p>
+  <div class="foot"><span>민간자격 등록</span><span>4 / 9</span></div>
+</section>
+
+<section class="card" id="c5">
+  <div class="tag">서류 준비</div>
+  <h2>신청 때<br><span class="accent">내는 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>민간자격 등록신청서</span></div>
+    <div class="check"><i>✓</i><span>자격의 관리·운영 규정</span></div>
+    <div class="check"><i>✓</i><span>재산목록과 권리관계<br>증명 서류</span></div>
+  </div>
+  <p class="note">규정에는 검정 기준과 운영 조직 등이 담겨요.</p>
+  <div class="foot"><span>민간자격 등록</span><span>5 / 9</span></div>
+</section>
+
+<section class="card" id="c6">
+  <div class="tag">신청 방법</div>
+  <h2>접수 방법은<br><span class="hot">여러 가지</span>예요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">인터넷·방문</b><span>온라인으로 내거나 직접 가서 제출해요.</span></div>
+    <div class="item"><b class="accent">우편·팩스</b><span>우편이나 팩스로도 접수할 수 있어요.</span></div>
+  </div>
+  <p class="note">처리기간은 안내마다 달라요. 꼭 확인하세요.</p>
+  <div class="foot"><span>민간자격 등록</span><span>6 / 9</span></div>
+</section>
+
+<section class="card" id="c7">
+  <div class="tag">절차</div>
+  <h2>등록 순서<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>등록 신청<small>한국직업능력연구원에 접수해요</small></p></div>
+    <div class="step"><div class="num">2</div><p>결격사유 확인<small>신청자 자격을 살펴봐요</small></p></div>
+    <div class="step"><div class="num">3</div><p>관계기관 확인<small>금지 분야와 명칭 사용 여부</small></p></div>
+    <div class="step"><div class="num">4</div><p>등록증 발급<small>등록대장에 기재해요</small></p></div>
+  </div>
+  <div class="foot"><span>민간자격 등록</span><span>7 / 9</span></div>
+</section>
+
+<section class="card" id="c8">
+  <div class="tag">등록한 뒤에</div>
+  <h2>등록 후에도<br><span class="accent">챙길 일</span>이 있어요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">변경이 생기면</b><span>변경등록을 신청해야 해요.</span></div>
+    <div class="item"><b class="hot">그만둘 때는</b><span>폐지 신고를 해야 해요.</span></div>
+    <div class="item"><b class="hot">등록증을 잃어버리면</b><span>재발급을 신청할 수 있어요.</span></div>
+  </div>
+  <div class="foot"><span>민간자격 등록</span><span>8 / 9</span></div>
+</section>
+
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청 전<br><span class="accent">마지막 점검</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>신청 자격이<br>되는지 확인했나요?</span></div>
+    <div class="check"><i>✓</i><span>금지 분야가<br>아닌지 봤나요?</span></div>
+    <div class="check"><i>✓</i><span>관리·운영 규정을<br>준비했나요?</span></div>
+    <div class="check"><i>✓</i><span>접수 방법을<br>정했나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 절차는 법령 개정에 따라 달라질 수 있어요. 신청 전 민간자격정보서비스에서 꼭 확인하세요.</p>
+  <div class="foot"><span>민간자격 등록</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
