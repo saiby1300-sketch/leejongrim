@@ -1,1 +1,1 @@
-probe 3 self
+probe 4 self

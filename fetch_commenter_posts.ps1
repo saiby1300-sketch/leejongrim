@@ -21,10 +21,10 @@ if (Test-Path $pf) {
     $pu = (Get-Content $pf -Raw).Trim()
     try {
         $t = Invoke-TH "profile_posts" @{ username = $pu; fields = "id,timestamp"; limit = 1 }
-        Write-Host "PROBE $pu : OK ($(@($t.data).Count) posts)"
+        $res = "OK ($(@($t.data).Count) posts)"
     } catch {
         $m = if ($_.ErrorDetails.Message) { $_.ErrorDetails.Message } else { $_.Exception.Message }
-        Write-Host "PROBE $pu : FAIL $($m -replace '\s+',' ')"
+        $res = "FAIL " + ($m -replace '\s+',' ')
     }
     exit 0
 }
