@@ -1,5 +1,5 @@
 {
   "probe_user": "lee_jongrim",
-  "result": "FAIL  { \"error\": { \"message\": \"Application does not have permission for this action\", \"type\": \"THApiException\", \"code\": 10, \"fbtrace_id\": \"AAKOykGBeNCKj62lMmcmOpz\" } }",
-  "at": "2026-10-07T01:38:12.9200274Z"
+  "result": "FAIL  { \"error\": { \"message\": \"Application does not have permission for this action\", \"type\": \"THApiException\", \"code\": 10, \"fbtrace_id\": \"Aw5E7QSjfM4aHqV9SaLQLtO\" } }",
+  "at": "2026-10-07T02:03:16.8990539Z"
 }
