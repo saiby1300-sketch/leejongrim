@@ -1,7 +1,7 @@
 name: Reply on Threads
 
-# Runs when reply_threads_request.json is pushed ({"reply_to": "...", "text": "..."}), or manually.
-# Each request id is replied to only once (tracked in .last_replied_threads).
+# Runs when reply_threads_request.json is pushed (one {"reply_to","text"} object or a list of them), or manually.
+# Each reply_to id is answered only once (tracked in .last_replied_threads).
 on:
   push:
     branches: [main]
@@ -28,43 +28,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check for duplicate reply
-        id: chk
-        shell: bash
-        run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            id=$(jq -r '.reply_to' reply_threads_request.json)
-            if [ -f .last_replied_threads ] && grep -qx "$id" .last_replied_threads; then
-              echo "skip=true" >> "$GITHUB_OUTPUT"
-              echo "Already replied to $id. Skipping."
-              exit 0
-            fi
-          fi
-          echo "skip=false" >> "$GITHUB_OUTPUT"
-
-      - name: Post reply
-        if: steps.chk.outputs.skip != 'true'
+      - name: Post replies
         shell: pwsh
         env:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
           IN_REPLY_TO: ${{ github.event.inputs.reply_to }}
           IN_TEXT: ${{ github.event.inputs.text }}
         run: |
+          $done = @()
+          if (Test-Path .last_replied_threads) { $done = @(Get-Content .last_replied_threads) }
           if ("${{ github.event_name }}" -eq "push") {
-            $req = Get-Content -Raw -Encoding UTF8 reply_threads_request.json | ConvertFrom-Json
-            ./reply_threads.ps1 -ReplyTo $req.reply_to -Text $req.text
+            $reqs = @(Get-Content -Raw -Encoding UTF8 reply_threads_request.json | ConvertFrom-Json)
           } else {
-            ./reply_threads.ps1 -ReplyTo $env:IN_REPLY_TO -Text $env:IN_TEXT
+            $reqs = @([pscustomobject]@{ reply_to = $env:IN_REPLY_TO; text = $env:IN_TEXT })
+          }
+          foreach ($r in $reqs) {
+            if ($done -contains $r.reply_to) { Write-Host "Already replied to $($r.reply_to). Skipping."; continue }
+            ./reply_threads.ps1 -ReplyTo $r.reply_to -Text $r.text
+            Add-Content -Path .last_replied_threads -Value $r.reply_to
+            Start-Sleep -Seconds 2
           }
 
-      - name: Record replied id
-        if: steps.chk.outputs.skip != 'true' && github.event_name == 'push'
+      - name: Record replied ids
         shell: bash
         run: |
-          jq -r '.reply_to' reply_threads_request.json >> .last_replied_threads
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .last_replied_threads
-          git commit -m "Record replied: $(jq -r '.reply_to' reply_threads_request.json)"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record replied ids"
           git pull --rebase origin main
           git push
