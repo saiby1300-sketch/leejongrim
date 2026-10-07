@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>공장 등록 카드뉴스</title>
+<style>
+  :root {
+    --bg: #1c232b;
+    --bg2: #6b4a2f;
+    --ink: #ffffff;
+    --muted: #ecdcca;
+    --accent: #ffb938;
+    --hot: #8fd3ff;
+    --card: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0e1216;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+    padding: 40px 0;
+  }
+  .card {
+    width: 1080px; height: 1350px; /* 4:5 */
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative; overflow: hidden;
+    padding: 110px 90px 100px;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; right: -180px; top: -180px;
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(143,211,255,.26), transparent 70%);
+  }
+  .card::after {
+    content: ""; position: absolute; left: -200px; bottom: -220px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,185,56,.22), transparent 70%);
+  }
+  .card > * { position: relative; z-index: 1; }
+  .tag {
+    align-self: flex-start;
+    font-size: 30px; font-weight: 700; letter-spacing: 1px;
+    color: var(--bg); background: var(--accent);
+    padding: 10px 26px; border-radius: 40px; margin-bottom: 44px;
+  }
+  h1 { font-size: 100px; line-height: 1.22; font-weight: 800; letter-spacing: -2px; }
+  h2 { font-size: 78px; line-height: 1.28; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 48px; }
+  .accent { color: var(--accent); }
+  .hot { color: var(--hot); }
+  .lead { font-size: 40px; line-height: 1.6; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .item {
+    background: var(--card); border-radius: 28px; padding: 36px 40px;
+    border: 1px solid rgba(255,255,255,.16);
+  }
+  .item b { display: block; font-size: 46px; margin-bottom: 10px; }
+  .item span { font-size: 36px; line-height: 1.5; color: var(--muted); word-break: keep-all; }
+  .step { display: flex; align-items: center; gap: 30px; }
+  .num {
+    flex: none; width: 84px; height: 84px; border-radius: 50%;
+    background: var(--hot); color: var(--bg);
+    font-size: 46px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  }
+  .step p { font-size: 44px; font-weight: 700; line-height: 1.35; }
+  .step p small { display: block; font-size: 32px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  .check { display: flex; gap: 24px; align-items: flex-start; font-size: 44px; line-height: 1.4; font-weight: 700; }
+  .check i { flex: none; color: var(--hot); font-style: normal; font-size: 52px; line-height: 1; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: var(--muted); margin-top: 30px;
+  }
+  .note { font-size: 30px; color: var(--muted); line-height: 1.55; margin-top: 28px; word-break: keep-all; }
+  .cover-sub { margin-top: 56px; }
+  .spacer { flex: 1; }
+  .vs { display: flex; gap: 28px; }
+  .vs .item { flex: 1; text-align: center; }
+  .vs .item b { font-size: 52px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<section class="card" id="c1">
+  <div class="tag">CARD NEWS · 제조업 창업</div>
+  <div class="spacer"></div>
+  <h1><span class="accent">공장 설립 승인</span><br>vs <span class="hot">공장 등록</span>,<br>한눈에 정리</h1>
+  <p class="lead cover-sub">공장을 열기 전에<br>내가 어느 쪽인지부터 가려 보세요</p>
+  <div class="spacer"></div>
+  <div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div>
+</section>
+
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>공장은<br><span class="hot">두 갈래</span>로 나뉘어요</h2>
+  <div class="body">
+    <div class="vs">
+      <div class="item"><b class="accent">설립 승인</b><span>일정 규모 이상이면 받아요</span></div>
+      <div class="item"><b class="hot">공장 등록</b><span>승인 대상이 아니면 등록해요</span></div>
+    </div>
+  </div>
+  <p class="note">근거는 산업집적활성화 및 공장설립에 관한 법률이에요.</p>
+  <div class="foot"><span>공장 등록</span><span>2 / 9</span></div>
+</section>
+
+<section class="card" id="c3">
+  <div class="tag">① 승인 대상</div>
+  <h2>건축면적<br><span class="accent">500㎡ 이상</span>이면</h2>
+  <div class="body">
+    <div class="item"><b class="hot">승인을 받아야 해요</b><span>공장을 새로 짓거나 늘리거나 업종을 바꿀 때예요.</span></div>
+    <div class="item"><b class="hot">공사 전에 받아요</b><span>승인 신청서와 사업계획서를 제출해요.</span></div>
+  </div>
+  <p class="note">세부 기준은 관할 지자체에 확인하세요.</p>
+  <div class="foot"><span>공장 등록</span><span>3 / 9</span></div>
+</section>
+
+<section class="card" id="c4">
+  <div class="tag">② 등록 대상</div>
+  <h2>승인 대상이<br><span class="hot">아니라면</span> 등록</h2>
+  <div class="body">
+    <div class="item"><b class="accent">누가 신청하나요?</b><span>공장의 소유자 또는 점유자가 신청해요.</span></div>
+    <div class="item"><b class="accent">어디에 내나요?</b><span>관할 지자체나 산업단지 관리기관에 내요.</span></div>
+  </div>
+  <div class="foot"><span>공장 등록</span><span>4 / 9</span></div>
+</section>
+
+<section class="card" id="c5">
+  <div class="tag">③ 승인 서류</div>
+  <h2>승인 신청에<br><span class="accent">필요한 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>공장설립 승인신청서</span></div>
+    <div class="check"><i>✓</i><span>사업계획서</span></div>
+    <div class="check"><i>✓</i><span>위치도·평면도 등 도면</span></div>
+    <div class="check"><i>✓</i><span>토지·건물 소유권 증명</span></div>
+  </div>
+  <p class="note">서류는 상황에 따라 달라질 수 있어요.</p>
+  <div class="foot"><span>공장 등록</span><span>5 / 9</span></div>
+</section>
+
+<section class="card" id="c6">
+  <div class="tag">④ 등록 서류</div>
+  <h2>등록 신청에<br><span class="hot">필요한 서류</span></h2>
+  <div class="body">
+    <div class="item"><b class="accent">공장등록 신청서</b><span>정해진 서식에 맞춰 작성해요.</span></div>
+    <div class="item"><b class="accent">사업계획서</b><span>승인 대상 외 공장용 서식이 따로 있어요.</span></div>
+  </div>
+  <p class="note">서식은 관할 지자체 안내에서 확인하세요.</p>
+  <div class="foot"><span>공장 등록</span><span>6 / 9</span></div>
+</section>
+
+<section class="card" id="c7">
+  <div class="tag">⑤ 신청 방법</div>
+  <h2><span class="hot">온라인</span>으로도<br>신청해요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">공장설립온라인지원시스템</b><span>인터넷으로 신청과 서식 확인이 가능해요.</span></div>
+    <div class="item"><b class="accent">방문 신청도 있어요</b><span>관할 지자체 담당 부서에 문의하세요.</span></div>
+  </div>
+  <div class="foot"><span>공장 등록</span><span>7 / 9</span></div>
+</section>
+
+<section class="card" id="c8">
+  <div class="tag">⑥ 등록 뒤에</div>
+  <h2>등록하고<br><span class="accent">끝이 아니에요</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>공장등록증명서<small>필요할 때 발급 신청해요</small></p></div>
+    <div class="step"><div class="num">2</div><p>내용이 바뀌면 변경등록<small>회사명, 대표자, 면적 등</small></p></div>
+    <div class="step"><div class="num">3</div><p>조건은 계속 지켜요<small>어기면 등록이 취소될 수 있어요</small></p></div>
+  </div>
+  <div class="foot"><span>공장 등록</span><span>8 / 9</span></div>
+</section>
+
+<section class="card" id="c9">
+  <div class="tag">CHECK LIST</div>
+  <h2>신청 전<br><span class="accent">마지막 점검</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>건축면적이 500㎡<br>이상인가요?</span></div>
+    <div class="check"><i>✓</i><span>승인 대상인지 등록<br>대상인지 가렸나요?</span></div>
+    <div class="check"><i>✓</i><span>필요한 서식과 서류를<br>준비했나요?</span></div>
+    <div class="check"><i>✓</i><span>변경 시 변경등록을<br>알고 있나요?</span></div>
+  </div>
+  <p class="note">※ 기준과 서류는 법령 개정과 지역에 따라 달라질 수 있어요. 신청 전 관할 지자체에 꼭 확인하세요.</p>
+  <div class="foot"><span>공장 등록</span><span>9 / 9</span></div>
+</section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      if (c.id !== 'c' + n) c.style.display = 'none';
+    });
+    document.body.style.padding = '0';
+    document.body.style.gap = '0';
+    document.body.style.background = 'none';
+  }
+</script>
+</body>
+</html>
