@@ -1,7 +1,7 @@
 # Collects replies to my recent Threads posts into replies_threads.json.
 # Token comes from the THREADS_TOKEN environment variable.
 # "pending" lists replies from other people that I have not answered yet.
-param([int]$Posts = 10)
+param([int]$Posts = 30)
 
 $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
