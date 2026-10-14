@@ -1,0 +1,117 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>병원 개설허가 카드뉴스</title><style>
+  :root { --bg:#071a38; --bg2:#1f4a8a; --ink:#ffffff; --muted:#d6e6ff; --accent:#ffd166; --hot:#7fe8ff;
+          --card:rgba(255,255,255,.10); --line:rgba(255,255,255,.18); --tagbg:#ffd166; --tagfg:#071a38; --numfg:#071a38; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#030c1c; font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink);
+         display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+  .card { width:1080px; height:1350px; background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);
+          position:relative; overflow:hidden; padding:110px 90px 100px; display:flex; flex-direction:column; }
+  .card::before { content:""; position:absolute; right:-180px; top:-180px; width:560px; height:560px; border-radius:50%;
+          background:radial-gradient(circle,rgba(127,232,255,.24),transparent 70%); }
+  .card::after { content:""; position:absolute; left:-200px; bottom:-220px; width:600px; height:600px; border-radius:50%;
+          background:radial-gradient(circle,rgba(255,209,102,.20),transparent 70%); }
+  .card > * { position:relative; z-index:1; }
+  .tag { align-self:flex-start; font-size:30px; font-weight:700; letter-spacing:1px; color:var(--tagfg); background:var(--tagbg);
+         padding:10px 26px; border-radius:40px; margin-bottom:44px; }
+  h1 { font-size:96px; line-height:1.22; font-weight:800; letter-spacing:-2px; }
+  h2 { font-size:78px; line-height:1.28; font-weight:800; letter-spacing:-1.5px; margin-bottom:48px; }
+  .accent { color:var(--accent); } .hot { color:var(--hot); }
+  .lead { font-size:40px; line-height:1.6; color:var(--muted); }
+  .body { flex:1; display:flex; flex-direction:column; justify-content:center; gap:28px; }
+  .item { background:var(--card); border-radius:28px; padding:36px 40px; border:1px solid var(--line); }
+  .item b { display:block; font-size:46px; margin-bottom:10px; }
+  .item span { font-size:36px; line-height:1.5; color:var(--muted); word-break:keep-all; }
+  .step { display:flex; align-items:center; gap:30px; }
+  .num { flex:none; width:84px; height:84px; border-radius:50%; background:var(--hot); color:var(--numfg);
+         font-size:46px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .step p { font-size:44px; font-weight:700; line-height:1.35; }
+  .step p small { display:block; font-size:32px; font-weight:400; color:var(--muted); margin-top:4px; }
+  .check { display:flex; gap:24px; align-items:flex-start; font-size:44px; line-height:1.4; font-weight:700; }
+  .check i { flex:none; color:var(--hot); font-style:normal; font-size:52px; line-height:1; }
+  .foot { display:flex; justify-content:space-between; align-items:center; font-size:28px; color:var(--muted); margin-top:30px; }
+  .note { font-size:30px; color:var(--muted); line-height:1.55; margin-top:28px; word-break:keep-all; }
+  .cover-sub { margin-top:56px; } .spacer { flex:1; }
+</style></head><body>
+<section class="card" id="c1"><div class="tag">CARD NEWS · 의료 창업</div><div class="spacer"></div><h1><span class="accent">의원은 신고</span>,<br><span class="hot">병원은 허가</span>?<br>차이부터 정리해요</h1><p class="lead cover-sub">개설 방식이 갈리는 기준을<br>먼저 짚어 드려요</p><div class="spacer"></div><div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div></section>
+<section class="card" id="c2">
+  <div class="tag">기본 구분</div>
+  <h2>의료기관은<br><span class="hot">두 갈래</span>로 나뉘어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">의원급</b><span>의원·치과의원·한의원·조산원이에요.</span></div>
+    <div class="item"><b class="hot">병원급</b><span>종합병원·병원·치과병원·한방병원·요양병원이에요.</span></div>
+  </div>
+  <p class="note">근거는 의료법 제33조예요.</p>
+  <div class="foot"><span>병원 개설허가</span><span>2 / 9</span></div>
+</section>
+<section class="card" id="c3">
+  <div class="tag">의원급</div>
+  <h2><span class="accent">신고</span>로 열어요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">신고 기관</b><span>시장·군수·구청장에게 신고해요.</span></div>
+    <div class="item"><b class="hot">신고증명서</b><span>적법하면 수리하고 신고증명서를 줘요.</span></div>
+  </div>
+  <div class="foot"><span>병원 개설허가</span><span>3 / 9</span></div>
+</section>
+<section class="card" id="c4">
+  <div class="tag">병원급</div>
+  <h2><span class="hot">허가</span>를<br>받아야 열어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">허가 기관</b><span>시·도지사의 허가를 받아요.</span></div>
+    <div class="item"><b class="accent">신고와 달라요</b><span>허가는 별도 심사를 거쳐요.</span></div>
+  </div>
+  <p class="note">허가 요건은 시·도에 확인하세요.</p>
+  <div class="foot"><span>병원 개설허가</span><span>4 / 9</span></div>
+</section>
+<section class="card" id="c5">
+  <div class="tag">대법원 판단</div>
+  <h2>의원급 신고는<br><span class="accent">요건만 맞으면</span></h2>
+  <div class="body">
+    <div class="item"><b class="hot">법정 요건 충족 시</b><span>행정청은 원칙적으로 신고를 수리해야 해요.</span></div>
+    <div class="item"><b class="hot">다른 이유로는 반려 불가</b><span>법령에 없는 사유로 거부하면 위법이에요.</span></div>
+  </div>
+  <p class="note">대법원 판례의 취지예요.</p>
+  <div class="foot"><span>병원 개설허가</span><span>5 / 9</span></div>
+</section>
+<section class="card" id="c6">
+  <div class="tag">시설기준</div>
+  <h2><span class="hot">시설기준</span>도<br>종류마다 달라요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">종류별 시설기준</b><span>의료법 시행규칙 별표에 정해져 있어요.</span></div>
+    <div class="item"><b class="accent">시설규격도 별도</b><span>입원실 등 규격이 따로 있어요.</span></div>
+  </div>
+  <p class="note">세부 수치는 별표에서 확인하세요.</p>
+  <div class="foot"><span>병원 개설허가</span><span>6 / 9</span></div>
+</section>
+<section class="card" id="c7">
+  <div class="tag">변경과 폐업</div>
+  <h2>변경·폐업도<br><span class="accent">구분</span>해요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">병원급 변경</b><span>허가사항을 바꾸면 변경허가가 필요해요.</span></div>
+    <div class="item"><b class="hot">의원급 변경</b><span>신고사항을 바꾸면 변경신고를 해요.</span></div>
+    <div class="item"><b class="hot">휴업·폐업</b><span>병원급·의원급 모두 신고해요.</span></div>
+  </div>
+  <div class="foot"><span>병원 개설허가</span><span>7 / 9</span></div>
+</section>
+<section class="card" id="c8">
+  <div class="tag">흐름 정리</div>
+  <h2>개설 순서<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>유형 확인<small>의원급인지 병원급인지</small></p></div>
+    <div class="step"><div class="num">2</div><p>자격 확인<small>의사·법인 등 개설 자격</small></p></div>
+    <div class="step"><div class="num">3</div><p>시설 준비<small>종류별 시설기준</small></p></div>
+    <div class="step"><div class="num">4</div><p>신고 또는 허가<small>시장·군수·구청장 / 시·도지사</small></p></div>
+    <div class="step"><div class="num">5</div><p>개설 후 운영<small>변경·휴폐업은 따로 신고</small></p></div>
+  </div>
+  <div class="foot"><span>병원 개설허가</span><span>8 / 9</span></div>
+</section>
+<section class="card" id="c9"><div class="tag">CHECK LIST</div><h2>개설 전<br><span class="accent">마지막 점검</span></h2><div class="body"><div class="check"><i>✓</i><span>내가 열 곳이 의원급인지<br>병원급인지 알았나요?</span></div><div class="check"><i>✓</i><span>신고인지 허가인지<br>구분했나요?</span></div><div class="check"><i>✓</i><span>종류별 시설기준을<br>확인했나요?</span></div><div class="check"><i>✓</i><span>관할 기관을<br>알아봤나요?</span></div></div><p class="note">※ 기준과 절차는 법령 개정과 의료기관 종류에 따라 달라질 수 있어요. 개설 전 관할 시·도·시·군·구에 꼭 확인하세요.</p><div class="foot"><span>병원 개설허가</span><span>9 / 9</span></div></section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) { if (c.id !== 'c' + n) c.style.display = 'none'; });
+    document.body.style.padding = '0'; document.body.style.gap = '0'; document.body.style.background = 'none';
+  }
+</script>
+</body></html>
