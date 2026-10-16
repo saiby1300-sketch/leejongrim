@@ -1,0 +1,119 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>교습소 신고 카드뉴스</title><style>
+  :root { --bg:#fbfbe6; --bg2:#e3e8a6; --ink:#1b2a52; --muted:#4d5a82; --accent:#c2410c; --hot:#1d4ed8;
+          --card:rgba(255,255,255,.80); --line:rgba(0,0,0,.12); --tagbg:#1b2a52; --tagfg:#ffffff; --numfg:#ffffff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#cfd49c; font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink);
+         display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+  .card { width:1080px; height:1350px; background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);
+          position:relative; overflow:hidden; padding:110px 90px 100px; display:flex; flex-direction:column; }
+  .card::before { content:""; position:absolute; right:-180px; top:-180px; width:560px; height:560px; border-radius:50%;
+          background:radial-gradient(circle,rgba(194,65,12,.12),transparent 70%); }
+  .card::after { content:""; position:absolute; left:-200px; bottom:-220px; width:600px; height:600px; border-radius:50%;
+          background:radial-gradient(circle,rgba(29,78,216,.12),transparent 70%); }
+  .card > * { position:relative; z-index:1; }
+  .tag { align-self:flex-start; font-size:30px; font-weight:700; letter-spacing:1px; color:var(--tagfg); background:var(--tagbg);
+         padding:10px 26px; border-radius:40px; margin-bottom:44px; }
+  h1 { font-size:96px; line-height:1.22; font-weight:800; letter-spacing:-2px; }
+  h2 { font-size:78px; line-height:1.28; font-weight:800; letter-spacing:-1.5px; margin-bottom:48px; }
+  .accent { color:var(--accent); } .hot { color:var(--hot); }
+  .lead { font-size:40px; line-height:1.6; color:var(--muted); }
+  .body { flex:1; display:flex; flex-direction:column; justify-content:center; gap:28px; }
+  .item { background:var(--card); border-radius:28px; padding:36px 40px; border:1px solid var(--line); }
+  .item b { display:block; font-size:46px; margin-bottom:10px; }
+  .item span { font-size:36px; line-height:1.5; color:var(--muted); word-break:keep-all; }
+  .step { display:flex; align-items:center; gap:30px; }
+  .num { flex:none; width:84px; height:84px; border-radius:50%; background:var(--hot); color:var(--numfg);
+         font-size:46px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .step p { font-size:44px; font-weight:700; line-height:1.35; }
+  .step p small { display:block; font-size:32px; font-weight:400; color:var(--muted); margin-top:4px; }
+  .check { display:flex; gap:24px; align-items:flex-start; font-size:44px; line-height:1.4; font-weight:700; }
+  .check i { flex:none; color:var(--hot); font-style:normal; font-size:52px; line-height:1; }
+  .foot { display:flex; justify-content:space-between; align-items:center; font-size:28px; color:var(--muted); margin-top:30px; }
+  .note { font-size:30px; color:var(--muted); line-height:1.55; margin-top:28px; word-break:keep-all; }
+  .cover-sub { margin-top:56px; } .spacer { flex:1; }
+</style></head><body>
+<section class="card" id="c1"><div class="tag">CARD NEWS · 교육 창업</div><div class="spacer"></div><h1><span class="accent">교습소</span>를 열려면,<br><span class="hot">신고</span>부터<br>정리해 볼까요?</h1><p class="lead cover-sub">자격과 시설, 서류까지<br>핵심만 짚어 드려요</p><div class="spacer"></div><div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div></section>
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>교습소는<br><span class="hot">신고</span>로 열어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">신고 기관</b><span>교육장에게 신고해요.</span></div>
+    <div class="item"><b class="hot">신고 없이 운영하면</b><span>1년 이하 징역 또는 1천만원 이하 벌금이에요.</span></div>
+  </div>
+  <div class="foot"><span>교습소 신고</span><span>2 / 9</span></div>
+</section>
+<section class="card" id="c3">
+  <div class="tag">교습자</div>
+  <h2><span class="accent">교습자</span> 자격도<br>갖춰야 해요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">자격 기준</b><span>교원 자격, 학력, 관련 자격 등에서 정해요.</span></div>
+    <div class="item"><b class="hot">한 장소 1과목</b><span>교습자 1명은 한 장소에서 1과목만 교습해요.</span></div>
+  </div>
+  <p class="note">구체적 기준은 교육지원청에 확인하세요.</p>
+  <div class="foot"><span>교습소 신고</span><span>3 / 9</span></div>
+</section>
+<section class="card" id="c4">
+  <div class="tag">시설 ①</div>
+  <h2><span class="hot">건물 조건</span>부터<br>봐요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">허용 용도</b><span>제2종근린생활시설(교습소), 교육연구시설이에요.</span></div>
+    <div class="item"><b class="accent">불가한 경우</b><span>무허가·위반건축물과 지하는 어려워요.</span></div>
+  </div>
+  <div class="foot"><span>교습소 신고</span><span>4 / 9</span></div>
+</section>
+<section class="card" id="c5">
+  <div class="tag">시설 ②</div>
+  <h2><span class="accent">유해업소</span>와<br>같은 건물은 안 돼요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">교육환경 보호</b><span>유해업소가 있으면 설립이 어려워요.</span></div>
+    <div class="item"><b class="hot">기준은 건물 규모별</b><span>연면적에 따라 적용이 달라요.</span></div>
+  </div>
+  <p class="note">자세한 기준은 관할 교육지원청에 문의하세요.</p>
+  <div class="foot"><span>교습소 신고</span><span>5 / 9</span></div>
+</section>
+<section class="card" id="c6">
+  <div class="tag">서류</div>
+  <h2>신고 때<br><span class="accent">내는 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>교습소 설립·운영 신고서</span></div>
+    <div class="check"><i>✓</i><span>교습자 자격 증명 서류</span></div>
+    <div class="check"><i>✓</i><span>신분증 사본</span></div>
+    <div class="check"><i>✓</i><span>교습소 시설평면도</span></div>
+    <div class="check"><i>✓</i><span>시설 사용권 증명(임대차계약서 등)</span></div>
+  </div>
+  <p class="note">교습비내역서 등 서류는 지역별로 달라요.</p>
+  <div class="foot"><span>교습소 신고</span><span>6 / 9</span></div>
+</section>
+<section class="card" id="c7">
+  <div class="tag">처리</div>
+  <h2>처리는<br><span class="hot">8일</span> 안팎이에요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">처리기한</b><span>접수일 포함 평일 기준 8일 이내로 안내돼요.</span></div>
+    <div class="item"><b class="accent">등록면허세</b><span>신고필증을 받기 전에 납부해요.</span></div>
+  </div>
+  <p class="note">지역별 안내를 확인하세요.</p>
+  <div class="foot"><span>교습소 신고</span><span>7 / 9</span></div>
+</section>
+<section class="card" id="c8">
+  <div class="tag">흐름 정리</div>
+  <h2>신고 순서<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>자격 확인<small>교습자 자격 점검</small></p></div>
+    <div class="step"><div class="num">2</div><p>장소 확보<small>건물 용도·유해업소 확인</small></p></div>
+    <div class="step"><div class="num">3</div><p>서류 준비<small>신고서·평면도·사용권</small></p></div>
+    <div class="step"><div class="num">4</div><p>교육지원청에 신고<small>교육장에게 제출</small></p></div>
+    <div class="step"><div class="num">5</div><p>신고필증 받고 운영<small>등록면허세 납부 뒤</small></p></div>
+  </div>
+  <div class="foot"><span>교습소 신고</span><span>8 / 9</span></div>
+</section>
+<section class="card" id="c9"><div class="tag">CHECK LIST</div><h2>신고 전<br><span class="accent">마지막 점검</span></h2><div class="body"><div class="check"><i>✓</i><span>교습자 자격을<br>확인했나요?</span></div><div class="check"><i>✓</i><span>건물 용도와 지하 여부를<br>확인했나요?</span></div><div class="check"><i>✓</i><span>유해업소가 같은 건물에<br>없나요?</span></div><div class="check"><i>✓</i><span>서류와 등록면허세를<br>알고 있나요?</span></div></div><p class="note">※ 기준과 서류는 법령 개정과 지역에 따라 달라질 수 있어요. 신고 전 관할 교육지원청에 꼭 확인하세요.</p><div class="foot"><span>교습소 신고</span><span>9 / 9</span></div></section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) { if (c.id !== 'c' + n) c.style.display = 'none'; });
+    document.body.style.padding = '0'; document.body.style.gap = '0'; document.body.style.background = 'none';
+  }
+</script>
+</body></html>
