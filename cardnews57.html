@@ -1,0 +1,114 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>건축물 용도변경 카드뉴스</title><style>
+  :root { --bg:#241038; --bg2:#6b3fa0; --ink:#ffffff; --muted:#e6d9f7; --accent:#fcd34d; --hot:#86efac;
+          --card:rgba(255,255,255,.10); --line:rgba(255,255,255,.18); --tagbg:#fcd34d; --tagfg:#241038; --numfg:#241038; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#120720; font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink);
+         display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+  .card { width:1080px; height:1350px; background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);
+          position:relative; overflow:hidden; padding:110px 90px 100px; display:flex; flex-direction:column; }
+  .card::before { content:""; position:absolute; right:-180px; top:-180px; width:560px; height:560px; border-radius:50%;
+          background:radial-gradient(circle,rgba(134,239,172,.18),transparent 70%); }
+  .card::after { content:""; position:absolute; left:-200px; bottom:-220px; width:600px; height:600px; border-radius:50%;
+          background:radial-gradient(circle,rgba(252,211,77,.20),transparent 70%); }
+  .card > * { position:relative; z-index:1; }
+  .tag { align-self:flex-start; font-size:30px; font-weight:700; letter-spacing:1px; color:var(--tagfg); background:var(--tagbg);
+         padding:10px 26px; border-radius:40px; margin-bottom:44px; }
+  h1 { font-size:96px; line-height:1.22; font-weight:800; letter-spacing:-2px; }
+  h2 { font-size:78px; line-height:1.28; font-weight:800; letter-spacing:-1.5px; margin-bottom:48px; }
+  .accent { color:var(--accent); } .hot { color:var(--hot); }
+  .lead { font-size:40px; line-height:1.6; color:var(--muted); }
+  .body { flex:1; display:flex; flex-direction:column; justify-content:center; gap:28px; }
+  .item { background:var(--card); border-radius:28px; padding:36px 40px; border:1px solid var(--line); }
+  .item b { display:block; font-size:46px; margin-bottom:10px; }
+  .item span { font-size:36px; line-height:1.5; color:var(--muted); word-break:keep-all; }
+  .step { display:flex; align-items:center; gap:30px; }
+  .num { flex:none; width:84px; height:84px; border-radius:50%; background:var(--hot); color:var(--numfg);
+         font-size:46px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .step p { font-size:44px; font-weight:700; line-height:1.35; }
+  .step p small { display:block; font-size:32px; font-weight:400; color:var(--muted); margin-top:4px; }
+  .check { display:flex; gap:24px; align-items:flex-start; font-size:44px; line-height:1.4; font-weight:700; }
+  .check i { flex:none; color:var(--hot); font-style:normal; font-size:52px; line-height:1; }
+  .foot { display:flex; justify-content:space-between; align-items:center; font-size:28px; color:var(--muted); margin-top:30px; }
+  .note { font-size:30px; color:var(--muted); line-height:1.55; margin-top:28px; word-break:keep-all; }
+  .cover-sub { margin-top:56px; } .spacer { flex:1; }
+</style></head><body>
+<section class="card" id="c1"><div class="tag">CARD NEWS · 건축</div><div class="spacer"></div><h1><span class="accent">건물 용도</span> 바꾼다면,<br><span class="hot">허가</span>일까<br><span class="hot">신고</span>일까?</h1><p class="lead cover-sub">구분 기준과 서류, 사용승인을<br>짚어 드려요</p><div class="spacer"></div><div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div></section>
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>용도를 바꾸려면<br><span class="hot">절차</span>가 있어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">근거</b><span>건축법의 용도변경 규정이에요.</span></div>
+    <div class="item"><b class="hot">접수</b><span>관할 시·군·구청 건축 부서에 문의해요.</span></div>
+  </div>
+  <div class="foot"><span>건축물 용도변경</span><span>2 / 9</span></div>
+</section>
+<section class="card" id="c3">
+  <div class="tag">허가와 신고</div>
+  <h2>시설군 번호로<br><span class="accent">나뉘어요</span></h2>
+  <div class="body">
+    <div class="item"><b class="hot">허가 대상</b><span>번호가 작은 시설군으로 바꿀 때예요.</span></div>
+    <div class="item"><b class="hot">신고 대상</b><span>번호가 큰 시설군으로 바꿀 때예요.</span></div>
+  </div>
+  <div class="foot"><span>건축물 용도변경</span><span>3 / 9</span></div>
+</section>
+<section class="card" id="c4">
+  <div class="tag">허가 서류</div>
+  <h2>허가 신청 때<br><span class="accent">내는 서류</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>용도변경 허가신청서</span></div>
+    <div class="check"><i>✓</i><span>대지 사용권 증명 서류</span></div>
+    <div class="check"><i>✓</i><span>설계도서</span></div>
+  </div>
+  <p class="note">건축물대장은 공무원이 행정정보로 확인해요.</p>
+  <div class="foot"><span>건축물 용도변경</span><span>4 / 9</span></div>
+</section>
+<section class="card" id="c5">
+  <div class="tag">신고 서류</div>
+  <h2>신고 때<br><span class="hot">서류</span>는 이래요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">신고서</b><span>용도변경 신고서를 내요.</span></div>
+    <div class="item"><b class="accent">도면</b><span>배치도와 평면도가 기본이에요.</span></div>
+  </div>
+  <div class="foot"><span>건축물 용도변경</span><span>5 / 9</span></div>
+</section>
+<section class="card" id="c6">
+  <div class="tag">사용승인</div>
+  <h2>사용승인도<br><span class="hot">확인</span>하세요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">100㎡ 이상</b><span>허가·신고 대상이면 사용승인을 신청해요.</span></div>
+    <div class="item"><b class="hot">생략 가능</b><span>500㎡ 미만이고 대수선이 없다면 생략해요.</span></div>
+  </div>
+  <div class="foot"><span>건축물 용도변경</span><span>6 / 9</span></div>
+</section>
+<section class="card" id="c7">
+  <div class="tag">건축물대장</div>
+  <h2>바꾼 뒤엔<br><span class="accent">대장</span>도 정리해요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">건축물대장 변경</b><span>변경 후 평면도가 필요해요.</span></div>
+    <div class="item"><b class="accent">화재·피난 도서</b><span>관련 도서도 첨부해요.</span></div>
+  </div>
+  <div class="foot"><span>건축물 용도변경</span><span>7 / 9</span></div>
+</section>
+<section class="card" id="c8">
+  <div class="tag">흐름 정리</div>
+  <h2>용도변경<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>현재·변경 용도 확인<small>건축물대장 기준</small></p></div>
+    <div class="step"><div class="num">2</div><p>시설군 비교<small>허가인지 신고인지</small></p></div>
+    <div class="step"><div class="num">3</div><p>서류 준비<small>신청서·도면 등</small></p></div>
+    <div class="step"><div class="num">4</div><p>시·군·구청 접수<small>허가 또는 신고</small></p></div>
+    <div class="step"><div class="num">5</div><p>사용승인·대장 정리<small>면적 기준 확인</small></p></div>
+  </div>
+  <div class="foot"><span>건축물 용도변경</span><span>8 / 9</span></div>
+</section>
+<section class="card" id="c9"><div class="tag">CHECK LIST</div><h2>신청 전<br><span class="accent">마지막 점검</span></h2><div class="body"><div class="check"><i>✓</i><span>현재 용도와 변경 용도를<br>확인했나요?</span></div><div class="check"><i>✓</i><span>허가인지 신고인지<br>구분했나요?</span></div><div class="check"><i>✓</i><span>필요한 도면을<br>준비했나요?</span></div><div class="check"><i>✓</i><span>사용승인 대상인지<br>확인했나요?</span></div></div><p class="note">※ 기준과 서류는 법령 개정과 지자체에 따라 달라질 수 있어요. 신청 전 관할 시·군·구청 건축 부서에 꼭 확인하세요.</p><div class="foot"><span>건축물 용도변경</span><span>9 / 9</span></div></section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) { if (c.id !== 'c' + n) c.style.display = 'none'; });
+    document.body.style.padding = '0'; document.body.style.gap = '0'; document.body.style.background = 'none';
+  }
+</script>
+</body></html>
