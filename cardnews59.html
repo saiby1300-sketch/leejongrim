@@ -1,0 +1,117 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>혼인신고 카드뉴스</title><style>
+  :root { --bg:#3a0f1f; --bg2:#a02c52; --ink:#ffffff; --muted:#fbd9e4; --accent:#ffd6a5; --hot:#a5f3fc;
+          --card:rgba(255,255,255,.10); --line:rgba(255,255,255,.18); --tagbg:#ffd6a5; --tagfg:#3a0f1f; --numfg:#3a0f1f; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#1f0710; font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink);
+         display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+  .card { width:1080px; height:1350px; background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);
+          position:relative; overflow:hidden; padding:110px 90px 100px; display:flex; flex-direction:column; }
+  .card::before { content:""; position:absolute; right:-180px; top:-180px; width:560px; height:560px; border-radius:50%;
+          background:radial-gradient(circle,rgba(165,243,252,.18),transparent 70%); }
+  .card::after { content:""; position:absolute; left:-200px; bottom:-220px; width:600px; height:600px; border-radius:50%;
+          background:radial-gradient(circle,rgba(255,214,165,.22),transparent 70%); }
+  .card > * { position:relative; z-index:1; }
+  .tag { align-self:flex-start; font-size:30px; font-weight:700; letter-spacing:1px; color:var(--tagfg); background:var(--tagbg);
+         padding:10px 26px; border-radius:40px; margin-bottom:44px; }
+  h1 { font-size:96px; line-height:1.22; font-weight:800; letter-spacing:-2px; }
+  h2 { font-size:78px; line-height:1.28; font-weight:800; letter-spacing:-1.5px; margin-bottom:48px; }
+  .accent { color:var(--accent); } .hot { color:var(--hot); }
+  .lead { font-size:40px; line-height:1.6; color:var(--muted); }
+  .body { flex:1; display:flex; flex-direction:column; justify-content:center; gap:28px; }
+  .item { background:var(--card); border-radius:28px; padding:36px 40px; border:1px solid var(--line); }
+  .item b { display:block; font-size:46px; margin-bottom:10px; }
+  .item span { font-size:36px; line-height:1.5; color:var(--muted); word-break:keep-all; }
+  .step { display:flex; align-items:center; gap:30px; }
+  .num { flex:none; width:84px; height:84px; border-radius:50%; background:var(--hot); color:var(--numfg);
+         font-size:46px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .step p { font-size:44px; font-weight:700; line-height:1.35; }
+  .step p small { display:block; font-size:32px; font-weight:400; color:var(--muted); margin-top:4px; }
+  .check { display:flex; gap:24px; align-items:flex-start; font-size:44px; line-height:1.4; font-weight:700; }
+  .check i { flex:none; color:var(--hot); font-style:normal; font-size:52px; line-height:1; }
+  .foot { display:flex; justify-content:space-between; align-items:center; font-size:28px; color:var(--muted); margin-top:30px; }
+  .note { font-size:30px; color:var(--muted); line-height:1.55; margin-top:28px; word-break:keep-all; }
+  .cover-sub { margin-top:56px; } .spacer { flex:1; }
+</style></head><body>
+<section class="card" id="c1"><div class="tag">CARD NEWS · 가족관계등록</div><div class="spacer"></div><h1><span class="accent">혼인신고</span>, 증인<br><span class="hot">2명</span>부터<br>챙기세요</h1><p class="lead cover-sub">신고 장소와 서류, 한쪽만 갈 때<br>준비물을 짚어 드려요</p><div class="spacer"></div><div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div></section>
+<section class="card" id="c2">
+  <div class="tag">먼저 알아두기</div>
+  <h2>혼인은<br><span class="hot">신고</span>로 효력이 생겨요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">신고가 필요해요</b><span>예식만으로는 법률상 부부가 아니에요.</span></div>
+    <div class="item"><b class="hot">수리되면</b><span>신고서가 수리돼야 법률상 부부가 돼요.</span></div>
+  </div>
+  <div class="foot"><span>혼인신고</span><span>2 / 9</span></div>
+</section>
+<section class="card" id="c3">
+  <div class="tag">신고 장소</div>
+  <h2>신고는<br><span class="accent">시·구·읍·면</span>에</h2>
+  <div class="body">
+    <div class="item"><b class="hot">가족관계등록 관서</b><span>시청·구청·읍·면사무소 등이에요.</span></div>
+    <div class="item"><b class="hot">접수 방법</b><span>방문 또는 우편으로 접수해요.</span></div>
+  </div>
+  <div class="foot"><span>혼인신고</span><span>3 / 9</span></div>
+</section>
+<section class="card" id="c4">
+  <div class="tag">기본 준비물</div>
+  <h2>신고 때<br><span class="accent">챙길 것</span></h2>
+  <div class="body">
+    <div class="check"><i>✓</i><span>혼인신고서</span></div>
+    <div class="check"><i>✓</i><span>신분증</span></div>
+    <div class="check"><i>✓</i><span>성년 증인 2명의 서명 또는 날인</span></div>
+  </div>
+  <p class="note">증인의 서명 또는 날인이 신고서에 필요해요.</p>
+  <div class="foot"><span>혼인신고</span><span>4 / 9</span></div>
+</section>
+<section class="card" id="c5">
+  <div class="tag">한쪽만 갈 때</div>
+  <h2>한 명만 가도<br><span class="hot">신고</span>할 수 있어요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">불출석자 서류</b><span>신분증명서 사본이 필요해요.</span></div>
+    <div class="item"><b class="accent">대안</b><span>서명공증서로 갈음하는 경우도 있어요.</span></div>
+    <div class="item"><b class="accent">날인 방식</b><span>인감증명서가 더 필요할 수 있어요.</span></div>
+  </div>
+  <div class="foot"><span>혼인신고</span><span>5 / 9</span></div>
+</section>
+<section class="card" id="c6">
+  <div class="tag">외국인 배우자</div>
+  <h2>외국인과 하면<br><span class="hot">서류</span>가 늘어요</h2>
+  <div class="body">
+    <div class="item"><b class="hot">혼인성립요건구비증명서</b><span>외국인 배우자 쪽 증명서예요.</span></div>
+    <div class="item"><b class="hot">번역본</b><span>외국 서류는 번역본이 필요해요.</span></div>
+  </div>
+  <p class="note">필요 서류는 국적에 따라 달라요.</p>
+  <div class="foot"><span>혼인신고</span><span>6 / 9</span></div>
+</section>
+<section class="card" id="c7">
+  <div class="tag">신고 전 확인</div>
+  <h2>신고 전에<br><span class="accent">확인</span>해 두세요</h2>
+  <div class="body">
+    <div class="item"><b class="accent">신분증</b><span>접수 때 본인 확인에 써요.</span></div>
+    <div class="item"><b class="accent">증인 서명</b><span>미리 받아 두면 헛걸음이 없어요.</span></div>
+    <div class="item"><b class="accent">접수 관서</b><span>주소지 밖에서도 가능한지 문의하세요.</span></div>
+  </div>
+  <div class="foot"><span>혼인신고</span><span>7 / 9</span></div>
+</section>
+<section class="card" id="c8">
+  <div class="tag">흐름 정리</div>
+  <h2>혼인신고<br><span class="hot">한눈에 보기</span></h2>
+  <div class="body">
+    <div class="step"><div class="num">1</div><p>신고서 작성<small>당사자와 증인 서명</small></p></div>
+    <div class="step"><div class="num">2</div><p>서류 준비<small>신분증 등</small></p></div>
+    <div class="step"><div class="num">3</div><p>관서 방문 또는 우편<small>시·구·읍·면</small></p></div>
+    <div class="step"><div class="num">4</div><p>접수와 수리<small>수리돼야 효력 발생</small></p></div>
+    <div class="step"><div class="num">5</div><p>혼인관계 확인<small>등록 내용 점검</small></p></div>
+  </div>
+  <div class="foot"><span>혼인신고</span><span>8 / 9</span></div>
+</section>
+<section class="card" id="c9"><div class="tag">CHECK LIST</div><h2>신고 전<br><span class="accent">마지막 점검</span></h2><div class="body"><div class="check"><i>✓</i><span>증인 2명의 서명을<br>받았나요?</span></div><div class="check"><i>✓</i><span>신분증을<br>준비했나요?</span></div><div class="check"><i>✓</i><span>한 명만 갈 때 서류를<br>확인했나요?</span></div><div class="check"><i>✓</i><span>접수할 관서를<br>정했나요?</span></div></div><p class="note">※ 서류와 절차는 법령 개정과 관서에 따라 달라질 수 있어요. 신고 전 관할 시·구·읍·면 사무소에 꼭 확인하세요.</p><div class="foot"><span>혼인신고</span><span>9 / 9</span></div></section>
+
+<script>
+  var n = new URLSearchParams(location.search).get('n');
+  if (n) {
+    document.querySelectorAll('.card').forEach(function (c) { if (c.id !== 'c' + n) c.style.display = 'none'; });
+    document.body.style.padding = '0'; document.body.style.gap = '0'; document.body.style.background = 'none';
+  }
+</script>
+</body></html>
