@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>건설업 야영장업 등록 카드뉴스</title>
+<script>
+  const args = new URLSearchParams(location.search);
+  if (args.has('grid')) document.documentElement.classList.add('grid');
+</script>
+<style>
+  :root { --bg:#172536; --bg2:#304b5d; --ink:#f7fafc; --muted:#d1e0e8; --accent:#b5f4e2; --hot:#f9d68d;
+          --card:rgba(255,255,255,.10); --line:rgba(221,246,248,.22); --tagbg:#b5f4e2; --tagfg:#172536; --numfg:#172536; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#e0cfa5; font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:var(--ink);
+         display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+  .card { width:1080px; height:1350px; background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);
+          position:relative; overflow:hidden; padding:110px 90px 100px; display:flex; flex-direction:column; }
+  .card::before { content:""; position:absolute; right:-180px; top:-180px; width:560px; height:560px; border-radius:50%;
+          background:radial-gradient(circle,rgba(29,78,216,.10),transparent 70%); }
+  .card::after { content:""; position:absolute; left:-200px; bottom:-220px; width:600px; height:600px; border-radius:50%;
+          background:radial-gradient(circle,rgba(190,24,93,.10),transparent 70%); }
+  .card > * { position:relative; z-index:1; }
+  .tag { align-self:flex-start; font-size:30px; font-weight:700; letter-spacing:1px; color:var(--tagfg); background:var(--tagbg);
+         padding:10px 26px; border-radius:40px; margin-bottom:44px; }
+  h1 { font-size:96px; line-height:1.22; font-weight:800; letter-spacing:-2px; }
+  h2 { font-size:78px; line-height:1.28; font-weight:800; letter-spacing:-1.5px; margin-bottom:48px; }
+  .accent { color:var(--accent); } .hot { color:var(--hot); }
+  .lead { font-size:40px; line-height:1.6; color:var(--muted); }
+  .body { flex:1; display:flex; flex-direction:column; justify-content:center; gap:28px; }
+  .item { background:var(--card); border-radius:28px; padding:36px 40px; border:1px solid var(--line); }
+  .item b { display:block; font-size:46px; margin-bottom:10px; }
+  .item span { font-size:36px; line-height:1.5; color:var(--muted); word-break:keep-all; }
+  .step { display:flex; align-items:center; gap:30px; }
+  .num { flex:none; width:84px; height:84px; border-radius:50%; background:var(--hot); color:var(--numfg);
+         font-size:46px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .step p { font-size:44px; font-weight:700; line-height:1.35; }
+  .step p small { display:block; font-size:32px; font-weight:400; color:var(--muted); margin-top:4px; }
+  .check { display:flex; gap:24px; align-items:flex-start; font-size:44px; line-height:1.4; font-weight:700; }
+  .check i { flex:none; color:var(--hot); font-style:normal; font-size:52px; line-height:1; }
+  .foot { display:flex; justify-content:space-between; align-items:center; font-size:28px; color:var(--muted); margin-top:30px; }
+  .note { font-size:30px; color:var(--muted); line-height:1.55; margin-top:28px; word-break:keep-all; }
+  .cover-sub { margin-top:56px; } .spacer { flex:1; }
+
+  body { background:#0d1724; }
+  h1, h2, .lead, .check, .step p { word-break:keep-all; }
+  h1 { font-size:92px; }
+  .card::before { background:radial-gradient(circle,rgba(181,244,226,.19),transparent 70%); }
+  .card::after { background:radial-gradient(circle,rgba(249,214,141,.16),transparent 70%); }
+  html.grid, html.grid body { width:3240px; height:4050px; overflow:hidden; }
+  html.grid body { display:grid; grid-template-columns:repeat(3,1080px);
+                   grid-template-rows:repeat(3,1350px); gap:0; padding:0; }
+</style></head><body>
+<section class="card" id="c1"><div class="tag">CARD NEWS · 관광사업</div><div class="spacer"></div><h1>캠핑장 등록,<br><span class="accent">배치도</span>에 무엇을<br>담아야 할까요?</h1><p class="lead cover-sub">사업계획서와 시설 목록을<br>같은 도면으로 점검해요.</p><div class="spacer"></div><div class="foot"><span>옆으로 넘겨 보세요 →</span><span>1 / 9</span></div></section>
+<section class="card" id="c2"><div class="tag">등록 유형</div><h2>텐트 자리와 주차장은<br>어떻게 배치하나요?</h2><div class="body"><div class="item"><b class="accent">일반야영장업</b><span>야영 장비를 설치할 공간과 야영에 필요한 시설을 갖추는 유형이에요.</span></div>
+<div class="item"><b class="hot">자동차야영장업</b><span>차를 세우고 바로 옆에 야영 장비를 펼칠 공간을 갖추는 유형이에요.</span></div></div><div class="foot"><span>야영장업 등록</span><span>2 / 9</span></div></section>
+<section class="card" id="c3"><div class="tag">사업계획서</div><h2>계획서에<br>운영 방식을 담아요</h2><div class="body"><div class="item"><b class="accent">야영 공간</b><span>사이트를 어디에 두고 몇 곳을 운영할지 적어 보세요.</span></div>
+<div class="item"><b class="hot">운영 계획</b><span>취사·위생시설을 어떻게 관리하고 이용객을 안내할지 정리해요.</span></div></div><div class="foot"><span>야영장업 등록</span><span>3 / 9</span></div></section>
+<section class="card" id="c4"><div class="tag">시설별 일람표</div><h2>시설을 하나씩<br>표에 옮겨요</h2><div class="body"><div class="item"><b class="accent">시설 목록</b><span>관할청이 안내하는 야영장업 시설별 일람표를 준비해요.</span></div>
+<div class="item"><b class="hot">도면과 대조</b><span>화장실과 취사장 이름을 배치도와 맞추면 확인하기 쉬워요.</span></div></div><div class="foot"><span>야영장업 등록</span><span>4 / 9</span></div></section>
+<section class="card" id="c5"><div class="tag">시설 배치도</div><h2>입구부터 사이트까지<br>동선을 그려요</h2><div class="body"><div class="item"><b class="accent">시설 위치</b><span>주차장, 야영 공간, 공용시설의 위치를 표시해요.</span></div>
+<div class="item"><b class="hot">이동 경로</b><span>사람이 걷는 길과 차량이 들어오는 길을 따라가 보세요.</span></div></div><div class="foot"><span>야영장업 등록</span><span>5 / 9</span></div></section>
+<section class="card" id="c6"><div class="tag">평면도</div><h2>배치도와 평면도는<br>보여 주는 게 달라요</h2><div class="body"><div class="item"><b class="accent">배치도</b><span>부지 전체에서 각 시설이 어디에 놓이는지 보여 줘요.</span></div>
+<div class="item"><b class="hot">시설 평면도</b><span>개별 시설의 내부 공간이 어떻게 나뉘는지 보여 줘요.</span></div></div><div class="foot"><span>야영장업 등록</span><span>6 / 9</span></div></section>
+<section class="card" id="c7"><div class="tag">다른 인허가</div><h2>부지에 필요한<br>인허가를 확인해요</h2><div class="body"><div class="item"><b class="accent">사전 문의</b><span>공사를 계획한다면 부지 위치와 공사 내용을 관할청에 알려 주세요.</span></div>
+<div class="item"><b class="hot">증빙 서류</b><span>다른 법령에 따른 인허가를 이미 받은 경우 그 증빙을 준비해요.</span></div></div><div class="foot"><span>야영장업 등록</span><span>7 / 9</span></div></section>
+<section class="card" id="c8"><div class="tag">접수 준비</div><h2>관할청 서식으로<br>마지막 대조를 해요</h2><div class="body"><div class="item"><b class="accent">접수처</b><span>야영장 소재지 관할 지자체의 관광사업 등록 담당 부서에 문의해요.</span></div>
+<div class="item"><b class="hot">도면과 계획서</b><span>시설 수, 위치, 명칭이 서로 일치하는지 확인하세요.</span></div></div><div class="foot"><span>야영장업 등록</span><span>8 / 9</span></div></section>
+<section class="card" id="c9"><div class="tag">CHECK LIST</div><h2>등록 신청 전<br>마지막 점검</h2><div class="body"><div class="check"><i>✓</i><span>야영장 유형을 확인했나요?</span></div>
+<div class="check"><i>✓</i><span>시설별 일람표와 도면이 맞나요?</span></div>
+<div class="check"><i>✓</i><span>다른 인허가 증빙도 챙겼나요?</span></div></div><p class="note">제출 서류는 신청 전 소재지 관할청에 확인하세요.</p><div class="foot"><span>야영장업 등록</span><span>9 / 9</span></div></section>
+<script>
+  const index = args.get('n');
+  if (index) {
+    document.querySelectorAll('.card').forEach(card => { if (card.id !== 'c' + index) card.hidden = true; });
+    document.head.insertAdjacentHTML('beforeend', '<style>[hidden]{display:none!important} body{padding:0;gap:0}</style>');
+  }
+</script>
+</body></html>
