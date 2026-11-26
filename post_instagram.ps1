@@ -9,8 +9,22 @@ $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $base = "https://graph.instagram.com/v21.0"
-$imgBase = "https://raw.githubusercontent.com/saiby1300-sketch/leejongrim/main/cards_jpg"
+$ref = if ($env:GITHUB_SHA) { $env:GITHUB_SHA } else { "main" }
+$imgBase = "https://raw.githubusercontent.com/saiby1300-sketch/leejongrim/$ref/cards_jpg"
 $count = 9
+$countPath = Join-Path $PSScriptRoot "cards_jpg/card_count.txt"
+if (Test-Path -LiteralPath $countPath) {
+    $manifest = @(Get-Content -LiteralPath $countPath -Encoding UTF8)
+    $orderKey = (Get-Content -LiteralPath (Join-Path $PSScriptRoot "publish.txt") -Raw -Encoding UTF8).Trim()
+    if ($manifest.Count -ne 2 -or $manifest[1] -notin @("6", "9")) {
+        throw "Invalid Instagram card count file."
+    }
+    if ($manifest[0] -eq $orderKey) { $count = [int]$manifest[1] }
+}
+foreach ($number in 1..$count) {
+    $cardPath = Join-Path $PSScriptRoot "cards_jpg/card_$number.jpg"
+    if (-not (Test-Path -LiteralPath $cardPath -PathType Leaf)) { throw "Missing card $number." }
+}
 
 $token = $env:IG_TOKEN
 if (-not $token) {
