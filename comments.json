@@ -1,14 +1,24 @@
 {
-  "fetched_at": "2026-11-25T07:13:15.4158685Z",
+  "fetched_at": "2026-11-26T07:34:44.0325815Z",
   "token_fingerprint": "ffdb77ae",
   "posts": [
+    {
+      "media_id": "18094830836232915",
+      "permalink": "https://www.instagram.com/p/DgMk_Z0FmLX/",
+      "posted": "2026-11-26T07:33:30+00:00",
+      "title": "중소기업자간 경쟁제품의 공공조달을 준비하고 계신가요? 중소기업자간 경쟁 방식의 계약과 법령이 정한 일부 수의계약에서는 공공기관이 직접생산 여부를 확인합니다. 입찰 공고문에서 직접생산확인증명서 제출 요건을 먼저 확인하세요.",
+      "comments_count": 0,
+      "comments": []
+    },
     {
       "media_id": "17998657773062650",
       "permalink": "https://www.instagram.com/p/DgJ9viRFvoN/",
       "posted": "2026-11-25T07:12:04+00:00",
       "title": "부동산 계약이나 각종 인허가, 민원 신청을 준비하다 보면 건축물대장을 확인해야 하는 경우가 많습니다.",
-      "comments_count": 0,
-      "comments": []
+      "comments_count": 1,
+      "comments": [],
+      "raw_response": "{\"data\":[],\"paging\":{\"cursors\":{\"before\":\"QVFIVE1id2Y2Ni16ZAW5LR25vcVpwanVPRUV5VmZAUSDFhOXJiejc1bDVlNjNEdGt4UldlWWFKRW1kNmFUUjE1aEh5TjJ3MzgtT05ldFNIeHVWd05ndTRGa3RB\",\"after\":\"QVFIVE1id2Y2Ni16ZAW5LR25vcVpwanVPRUV5VmZAUSDFhOXJiejc1bDVlNjNEdGt4UldlWWFKRW1kNmFUUjE1aEh5TjJ3MzgtT05ldFNIeHVWd05ndTRGa3RB\"}}}",
+      "raw_expand": "{\"id\":\"17998657773062650\"}"
     },
     {
       "media_id": "18091174301322569",
@@ -71,14 +81,6 @@
       "permalink": "https://www.instagram.com/p/DgHQ237Fl34/",
       "posted": "2026-11-24T06:01:23+00:00",
       "title": "어린이집 정원은 전체 면적만으로 정해지지 않습니다. 놀이터를 제외한 전용 시설면적은 영유아 한 명당 4.29㎡, 보육실 면적은 한 명당 2.64㎡ 이상이어야 합니다. 시설면적이 85.8㎡이고 그중 보육실로 인정되는 면적이 47.52㎡라면, 두 면적 기준으로 가능한 정원은 최대 18명입니다. 계약 전에는 공간별 용도와 면적을 표시한 도면을 관할 보육 담당 부서에 보여주고 다른 인가 요건도 함께 확인하세요. 자료는 영유아보육법 시행규칙 별표 1 및 교육부 2026년 보육사업안내입니다. 사진은 AI로 제작했습니다. #어린이집인가 #어린이집정원 #보육실",
-      "comments_count": 0,
-      "comments": []
-    },
-    {
-      "media_id": "18016970219968993",
-      "permalink": "https://www.instagram.com/p/DgGZyGLD0wx/",
-      "posted": "2026-11-23T22:00:08+00:00",
-      "title": "해외 차를 미리 수입해 재고로 판매하는 방식과, 국내 소비자가 고른 차를 대신 주문해 수입하는 방식은 영업 종류가 다릅니다. 고객 요청, 해외 발주, 실제 수입 주체를 한 건씩 대조해 보세요. 식품 구매대행을 시작하기 전에는 식약처 수입식품정보마루에서 영업등록 절차와 수입금지 성분도 확인하세요. 자료: 수입식품안전관리 특별법 시행령 제2조, 식약처 수입식품정보마루 구매대행 안내. 사진은 AI로 제작했습니다. #식품구매대행 #해외직구 #수입식품",
       "comments_count": 0,
       "comments": []
     }
